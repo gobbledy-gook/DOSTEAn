@@ -1,0 +1,23 @@
+{
+  "name": "dostean",
+  "version": "1.0.0",
+  "description": "A website for DOSTEAn",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peacexoom/DOSTEAn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peacexoom/DOSTEAn/issues"
+  },
+  "homepage": "https://github.com/Peacexoom/DOSTEAn#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
