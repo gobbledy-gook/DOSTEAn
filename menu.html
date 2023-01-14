@@ -7,13 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <style>
+        .custom-img {
+            background-image: url("bg.jpg");
+        }
+
+        .board-img1 {
+            background-image: url("bg-1.jpg");
+        }
+
+        .board-img2 {
+            background-image: url("bg-2.jpg");
+        }
+
+        .board-img3 {
+            background-image: url("bg-3.jpg");
+        }
+    </style>
 </head>
 
 <body>
-    <div class="relative">
-        <img src="bg.jpg" class="h-full w-full" />
-        <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            OUR MENU</h1>
+
+    <header class="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img">
         <h3 class="absolute text-2xl text-amber-300 top-5 right-5">
             <nav class="flex space-x-5 justify-end px-8 ">
                 <span class="nav"><a href="menu.html">Menu</a></span>
@@ -21,10 +36,315 @@
                 <span class="nav"><a href="about-us.html">About Us</a></span>
             </nav>
         </h3>
-    </div>
+        <div class="p-5 text-2xl text-slate-200 col-md-7 col-sm-12 text-center">
+            <h1 class=" bread text-5xl">OUR MENU</h1>
+        </div>
+    </header>
 
-    <div class="bg-white py-2">
-        Content
+    <div class="flex items-center justify-center h-auto bg-fixed bg-center bg-cover board-img1">
+        
+        <div class="container grid grid-cols-2 my-10">
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Mocktail</h1>
+                <div class="px-8 py-3 grid grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Classic Mojito</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>All time favorite refreshing drink</p>
+                    </div>
+                </div>
+                <div class="px-8 my-1 py-3 grid grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Watermelon Mojito</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Refreshment and tummy cooler comes together</p>
+                    </div>
+                </div>
+                <div class="px-8 my-1 grid py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Orange Mojito</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Tangy flavor of orange along with mint</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Berry Lemonade</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">159.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Cranberry flavor and lemeonade combo</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Chilly Orange</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">159.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Need spicy touch lets try it</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Beer Mocktail</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">209.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Non alcoholic drink beer flavoured</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Kala Khatta</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Original kala Khayya with the twist of mocktail</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Masala Lemonade</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>refreshing lemondade</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Kaccha Aam</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Raw mango flavor on cool mocktail</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Imli</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">119.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Bachpan ki yaado ke saath</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Shakes</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Nutella Shake</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">249.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Oreo Shake</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">219.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>KitKat Shake</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">239.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Chocolate Shake</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">219.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Rose Faluda</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">199.00</span>
+                </div>
+            </div>
+            <div class="text-white my-10 mx-10">
+                <h1 class="px-8 text-5xl justify-center">Hot Coffee</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Black Coffee</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">35.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Milk Coffee</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">36.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Chocolate Coffee</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">65.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Hot Chocolate with Biscuit Cup</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">60.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Classic Hot Chocolate</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">70.00</span>
+                </div>
+            </div>
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Bevarages</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Cold Drink</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">38.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Lemon Ice Tea</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">129.00</span>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Peach Ice Tea</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">138.00</span>
+                </div>
+            </div>
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Soup</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Manchow</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">99.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Flavored classic chinese soup</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Hot N Sour</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">99.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Spiciness of chilly and tangy taste citric</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Lemon Coriander</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">99.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Refreshing flavor with bite of coriander and garlic</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Burnt Garlic Soup</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">199.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Mid spicy soup accomplished flavor of burnt garlic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Continental</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Mexican Chilly Beans</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">199.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Soup load with mexican flavor nd bite of nachos</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Cream of Tomato</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">99.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Mid taste classic creamy tomato soup</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white mx-10">
+                <h1 class="px-8 text-5xl justify-center">Chinese</h1>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Veg Manchurian</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">169.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Vegetable balls toasted in classic sauce</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Green Manchurian</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">189.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Vegetable balls toasted with chinese spinach sauce</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Paneer Chilly</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">229.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Coated fried paneer toasted in classy chilly sauce</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>BBQ Paneer</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">229.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Smoky flavor oriental style paneer</p>
+                    </div>
+                </div>
+                <div class="px-8 grid my-1 py-3 grid-cols-2">
+                    <div class="text align-items-center w-40">
+                        <h2 class="text-2xl"><span>Veg Crispy</span></h2>
+                    </div>
+                    <span class="price px-40 text-2xl">209.00</span>
+                    <div class="d-block col-span-2">
+                        <p>Crunchy vegetables toasted with mid spicy sauce</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <div class="flex items-center justify-center h-screen bg-fixed bg-center bg-cover board-img2">
+        <div class="container">
+
+        </div>
+    </div>
+    <div class="flex items-center justify-center h-screen bg-fixed bg-center bg-cover board-img3">
+        <div class="container">
+
+        </div>
     </div>
 
     <div class="row no-gutters bg-black text-white px-11 flex space-x-10">
@@ -51,5 +371,11 @@
         </div>
     </div>
 </body>
+<a
+    href="https://www.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_11712558.htm#query=blackboard&position=0&from_view=keyword">Image
+    by benzoix</a> on Freepik
+<a
+    href="https://www.freepik.com/free-photo/coffee-beans-dark-background-top-view-coffee-concept-banner_15773265.htm#query=brown%20coffee&position=43&from_view=keyword">Image
+    by valeria_aksakova</a> on Freepik
 
 </html>
