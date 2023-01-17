@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOSTEAn</title>
+
   <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/slider.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <style>
     .poppinslight {
@@ -84,16 +86,16 @@
   </nav>
 
 
-  <div id="mySlider"></div>
+  <div id="mySlider" data-aos="fade-in"></div>
 
 
   <!-- History -->
-  <div class="pt-16 md:flex z-0 w-screen">
-    <div class="">
+  <div class="pt-16 md:flex z-0 w-screen" data-aos="fade-in">
+    <div class="" data-aos="fade-in">
       <img src="../images/photo-1.jpg" alt="" class="max-w-3xl">
     </div>
 
-    <div class="bg-[#f1d2bc] flex justify-center items-center">
+    <div class="bg-[#f1d2bc] flex justify-center items-center" data-aos="fade-in">
       <div class="px-20">
         <div>
           <span class="poppinslight text-4xl">Discover</span>
@@ -113,10 +115,10 @@
   </div>
 
   <!-- Famous Dishes -->
-  <div class="p-0">
+  <div class="p-0" data-aos="fade-in">
     <div class=" parallax flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img w-screen p-0">
 
-          <div class=" basis-1/2 text-white flex justify-center items-center">
+          <div class=" basis-1/2 text-white flex justify-center items-center" data-aos="fade-in">
             <div class="text-right">
               <span class="poppinslight text-4xl">Discover</span>
               <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
@@ -126,7 +128,7 @@
             </div>
           </div>
 
-          <div class="basis-1/2">
+          <div class="basis-1/2" data-aos="fade-in">
             <div class="flex gap-6">
               <div class="flex flex-col">
                 <div class="flex justify-end">
@@ -153,7 +155,7 @@
   <!-- Events -->
   <div class="py-14">
     <div>
-      <div class="text-center text-white pb-4">
+      <div class="text-center text-white pb-4" data-aos="fade-in">
         <span class="poppinslight text-4xl">Organize</span>
         <h2 class="poppinsbold text-5xl uppercase">your events</h2>
         <p class="poppins text p-9">
@@ -163,7 +165,7 @@
         </p>
       </div>
     </div>
-    <div class="flex px-28 gap-6">
+    <div class="flex px-28 gap-6" data-aos="fade-in">
       <div>
         <img src="../images/photo-2.jpg" alt="">
       </div>
@@ -180,7 +182,7 @@
   <!-- Contact Us -->
   <section class="mb-32 text-gray-800 px-16">
     <div class="flex flex-wrap">
-      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6 poppins text-white">
+      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6 poppins text-white" data-aos="fade-in">
         <h2 class="mb-6 poppinsbold text-5xl">Contact us</h2>
         <p class="mb-6">
           If you have any further questions or if you would like to make a reservation, please don't hesitate to contact
@@ -207,7 +209,7 @@
           <p class="mb-2">info@gmail.com</p>
         </div>
       </div>
-      <div>
+      <div data-aos="fade-in">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7980.8973284630165!2d72.77414039654582!3d21.161379637558866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04da5cd96a645%3A0x570d0a5bf2f181a2!2sDostean%20Cafe%20%26%20restro!5e0!3m2!1sen!2sin!4v1673767630413!5m2!1sen!2sin"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -223,6 +225,10 @@
   </footer>
 
   <script src="../js/slider.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
