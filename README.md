@@ -1,4 +1,11 @@
-# DOSTEAn
+# Google Winter of Code, GDSC, SVNIT
+## Team - FrostByte
+- Bhavya Hirani
+- Garvit Shah
+- Mohammad Ansah
+- Priyanshu Parikh
+##
+## DOSTEAn
 A website for DOSTEAn
 
 For the quick start, you can follow the steps below:
