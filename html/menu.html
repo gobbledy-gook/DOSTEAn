@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Menu</title>
     <style>
         .custom-img {
             background-image: url("../images/bg.jpg");
@@ -76,9 +76,23 @@
     </header>
 
     <div class="flex items-center justify-center h-auto bg-fixed bg-center bg-cover board-img1">
-
+        <div class="text-white">
+            <div id="mocktail-btn">
+                Mocktail
+            </div>
+            <div id="shakes-btn">
+                Shakes
+            </div>
+            <a id="hot-coffee-btn">
+                Hot Coffee
+            </a>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="container grid grid-cols-2 my-10">
-            <div class="text-white mx-10">
+            <div class="text-white mx-10" id="mocktail">
                 <h1 class="px-8 text-5xl justify-center">Mocktail</h1>
                 <div class="px-8 py-3 grid grid-cols-2">
                     <div class="text align-items-center w-40">
@@ -171,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-white mx-10">
+            <div class="text-white mx-10" id="shakes" style="display: none;">
                 <h1 class="px-8 text-5xl justify-center">Shakes</h1>
                 <div class="px-8 grid my-1 py-3 grid-cols-2">
                     <div class="text align-items-center w-40">
@@ -204,7 +218,7 @@
                     <span class="price px-40 text-2xl">199.00</span>
                 </div>
             </div>
-            <div class="text-white my-10 mx-10">
+            <div class="text-white my-10 mx-10" id="hot-coffee" style="display: none;">
                 <h1 class="px-8 text-5xl justify-center">Hot Coffee</h1>
                 <div class="px-8 grid my-1 py-3 grid-cols-2">
                     <div class="text align-items-center w-40">
@@ -237,7 +251,7 @@
                     <span class="price px-40 text-2xl">70.00</span>
                 </div>
             </div>
-            <div class="text-white mx-10">
+            <!-- <div class="text-white mx-10">
                 <h1 class="px-8 text-5xl justify-center">Bevarages</h1>
                 <div class="px-8 grid my-1 py-3 grid-cols-2">
                     <div class="text align-items-center w-40">
@@ -375,7 +389,7 @@
                         <p>Crunchy vegetables toasted with mid spicy sauce</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
@@ -395,6 +409,8 @@
         <span class="text-sm text-gray-500 dark:text-gray-400">© 2023 DOSTEAn. All Rights Reserved.
         </span>
     </footer>
+
+    <script src="../js/menu.js"></script>
 </body>
 <a
     href="https://www.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_11712558.htm#query=blackboard&position=0&from_view=keyword">Image
