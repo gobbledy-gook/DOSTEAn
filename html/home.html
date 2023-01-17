@@ -24,11 +24,19 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
     }
+
+    body{
+      overflow-x:clip;
+    }
+
+    .parallax{
+      background-image:url('../images/bgwood.jpg');
+      padding:0;
+    }
   </style>
 </head>
 
 <body class="bg-[#110904]">
-
   <!-- Navbar -->
   <nav class="bg-[#633515] border-gray-200 px-52 py-2.5 dark:bg-gray-900 text-white fixed w-full z-10">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -76,7 +84,7 @@
 
 
   <!-- History -->
-  <div class="pt-16 md:flex z-0">
+  <div class="pt-16 md:flex z-0 w-screen">
     <div class="">
       <img src="../images/photo-1.jpg" alt="" class="max-w-3xl">
     </div>
@@ -101,41 +109,40 @@
   </div>
 
   <!-- Famous Dishes -->
-  <div class="px-28 py-20">
-    <div>
-      <div class="flex">
+  <div class="p-0">
+    <div class=" parallax flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img w-screen p-0">
 
-        <div class=" basis-1/2 text-white flex justify-center items-center">
-          <div class="text-right">
-            <span class="poppinslight text-4xl">Discover</span>
-            <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
-            <button type="button"
-              class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900 uppercase">View
-              full menu</button>
-          </div>
-        </div>
-
-        <div class="basis-1/2">
-          <div class="flex gap-6">
-            <div class="flex flex-col">
-              <div class="flex justify-end">
-                <img src="../images/dish-1.jpg" class="w-44">
-              </div>
-              <div class="mt-6">
-                <img src="../images/dish-4.jpg" class="w-52">
-              </div>
-            </div>
-            <div class="flex flex-col">
-              <div class="">
-                <img src="../images/dish-3.jpg" class="w-48">
-              </div>
-              <div class="mt-5">
-                <img src="../images/dish-2.jpg" class="w-48">
-              </div>
+          <div class=" basis-1/2 text-white flex justify-center items-center">
+            <div class="text-right">
+              <span class="poppinslight text-4xl">Discover</span>
+              <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
+              <button type="button"
+                class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900 uppercase">View
+                full menu</button>
             </div>
           </div>
-        </div>
-      </div>
+
+          <div class="basis-1/2">
+            <div class="flex gap-6">
+              <div class="flex flex-col">
+                <div class="flex justify-end">
+                  <img src="../images/dish-1.jpg" class="w-44">
+                </div>
+                <div class="mt-6">
+                  <img src="../images/dish-4.jpg" class="w-52">
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="">
+                  <img src="../images/dish-3.jpg" class="w-48">
+                </div>
+                <div class="mt-5">
+                  <img src="../images/dish-2.jpg" class="w-48">
+                </div>
+              </div>
+            </div>
+          </div>
+  
     </div>
   </div>
 
