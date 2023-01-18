@@ -199,27 +199,27 @@ class Slider {
   var miaslider = new Slider(settings);
   
           miaslider.newSlide(
-          "First Slide",
-          "Lorem ipsum Dolor si amet",
+          "BBQ Paneer",
+          "",
           "../images/IMG-20230112-WA0086.jpg",
-          "https://codepen.io/emanuelemicheletti/pen/abYarrv" ,
-          "Shop NOW"
+          "../html/menu.html" ,
+          "View More"
           );
   
           miaslider.newSlide(
-          "Second Slide",
-          "Lorem ipsum Dolor si amet",
+          "Chilly Garlic Fries",
+          "",
           "../images/IMG-20230112-WA0090.jpg",
-          "https://codepen.io/emanuelemicheletti/pen/abYarrv",
-          "Open This Product"
+          "../html/menu.html",
+          "View More"
           );
   
           miaslider.newSlide(
-          "Third Slide",
-          "Lorem ipsum dolor sit amet",
-          "../images/IMG-20230112-WA0055.jpg",
-          "https://codepen.io/emanuelemicheletti/pen/abYarrv",
-          "Shop This Product"
+          "Triple Rice",
+          "",
+          "../images/sl-01.jpg",
+          "../html/menu.html",
+          "View More"
           );
   
           miaslider.init();
