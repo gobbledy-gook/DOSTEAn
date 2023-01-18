@@ -16,7 +16,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
 
   <style>
-    nav, footer{
+    nav,
+    footer {
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     }
 
@@ -42,12 +43,103 @@
       background-image: url('../images/parallax-bg.jpg');
       padding: 0;
     }
+
+    .nav-colored {
+      background-color: #151515;
+
+    }
+
+    .nav-transparent {
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    }
+
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+.carousel-container {
+  width: 1100px;
+  margin: 50px auto;
+  position: relative;
+  /* border-left-width: 4px; */
+  /* border-left-style: solid;
+  border-left-color: #aaa; */
+}
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
+  }
+}
+.inner-carousel {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.track {
+  display: inline-flex;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.card-container {
+  width: 366.7px;
+  height: 450px;
+  flex-shrink: 0;
+  padding-right: 20px;
+  padding-left: 20px
+}
+@media (max-width: 768px) {
+  .card-container {
+    width: 184px;
+  }
+}
+.card {
+  width: 100%;
+  height: 100%;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+  background-position: center bottom;
+  background-size: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.nav .prev {
+  left: -30px;
+  display: none;
+}
+.nav .prev.show {
+  display: block;
+}
+.nav .next {
+  right: -30px;
+}
+.nav .next.hide {
+  display: none;
+}
   </style>
 </head>
 
 <body bgcolor="#0f0f0f">
   <!-- Navbar -->
-  <nav class="bg-[#272727] border-gray-200 px-52 py-2.5 text-white fixed w-full z-10">
+  <nav id="nav" class="nav-transparent border-gray-200 px-52 py-2.5 text-white fixed w-full z-10 poppins">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="" class="flex items-center">
         <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
@@ -69,7 +161,7 @@
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
           <li>
             <a href="home.html"
-              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-[#c49b63] dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Home</a>
           </li>
           <li>
             <a href="menu.html"
@@ -91,7 +183,7 @@
   </nav>
 
 
-  <div class = "poppins" id="mySlider" data-aos="fade-in"></div>
+  <div class="poppins" id="mySlider" data-aos="fade-in"></div>
 
 
   <!-- History -->
@@ -122,14 +214,15 @@
   <!-- Famous Dishes -->
   <div class="p-0" data-aos="fade-in">
     <div
-      class=" parallax md:flex items-center justify-center gap-4 h-screen mb-12 bg-fixed bg-center bg-cover custom-img ">
+      class=" parallax md:flex items-center justify-center gap-4 h-screen bg-fixed bg-center bg-cover custom-img ">
 
-      <div class=" basis-1/2 text-white flex justify-center items-center">
-        <div class="md:text-right text-center py-8" data-aos="fade-up">
+      <div class="text-center basis-1/2 text-white flex justify-center items-center">
+        <div class="md:text-right py-8" data-aos="fade-up">
           <span class="poppinslight text-4xl text-[#c49b63]">Discover</span>
           <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
           <button type="button"
-            class="text-[#c49b63] hover:text-[#c49b63] border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-[#c49b63] dark:text-[#c49b63] dark:hover:text-white dark:hover:bg-[#c49b63] dark:focus:ring-yellow-900 uppercase"  onclick="window.location.href = 'menu.html';">View
+            class="text-[#c49b63] hover:text-[#c49b63] border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-[#c49b63] dark:text-[#c49b63] dark:hover:text-white dark:hover:bg-[#c49b63] dark:focus:ring-yellow-900 uppercase poppins"
+            onclick="window.location.href = 'menu.html';">View
             full menu</button>
         </div>
       </div>
@@ -159,10 +252,10 @@
   </div>
 
   <!-- Events -->
-  <div class="py-14">
+  <div class="py-14 bg-[#c49b63]">
     <div>
-      <div class="text-center text-white pb-4" data-aos="fade-up">
-        <span class="poppinslight text-4xl text-[#c49b63]">Organize</span>
+      <div class="text-center text-[#272727] pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#272727]">Organize</span>
         <h2 class="poppinsbold text-5xl uppercase">your events</h2>
         <p class="poppins text p-9">
           We understand that finding the perfect location for your events can be a daunting task. That's why we've
@@ -180,6 +273,66 @@
       </div>
       <div class="flex self-center">
         <img src="../images/photo-4.jpg" alt="" data-aos="fade-up">
+      </div>
+    </div>
+  </div>
+
+  <!-- testimonials -->
+
+  <div class="py-14">
+    <div>
+      <div class="text-center text-white pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#c49b63]">Testimonials</span>
+        <h2 class="poppinsbold text-5xl uppercase">Hear From Them</h2>
+        <p class="poppins text p-9">
+          We understand that finding the perfect location for your events can be a daunting task. That's why we've
+          created a special café section just for you. Whether you're planning a corporate meeting, a birthday party, or
+          a social gathering, our café is the perfect place to host your event.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="inner-carousel">
+        <div class="track">
+          <div class="card-container">
+            <div class="card card1">
+              <video controls>
+                <source src="../videos/VID-20230112-WA0074.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card2">
+              <video controls>
+                <source src="../videos/VID-20230112-WA0078.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card3">
+              <video controls>
+                <source src="../videos/VID-20230112-WA0079.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card4">
+              <video controls>
+                <source src="../videos/VID-20230112-WA0080.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+         
+        </div>
+        <div class="nav">
+          <button class="prev bg-white poppins"><i class="fas fa-arrow-left fa-2x"><</i></button>
+          <button class="next bg-[#c49b63] poppins"><i class="fas fa-arrow-right fa-2x">></i></button>
+        </div>
       </div>
     </div>
   </div>
@@ -288,7 +441,22 @@
     AOS.init();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+  <script>
+    var myNav = document.getElementById('nav');
+    window.onscroll = function () {
+      if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+      }
+      else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+      }
+    };
+  </script>
 
+  <script src="../js/testimonial-slider.js">
+  </script>
 </body>
 
 </html>
