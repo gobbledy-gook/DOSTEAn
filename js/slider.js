@@ -187,7 +187,7 @@ class Slider {
   const settings = {
               container: "mySlider", //container name
               textColor: "white", //text color also # or rgba
-              ctaBackground: "#81C784", //button color, dots color and nav arrow color
+              ctaBackground: "#c49b63", //button color, dots color and nav arrow color
               autoplay: true, //true/false
               autoplaySpeed: 10000, //time slide active before change
               ctaColor: "white", //cta TEXT color
