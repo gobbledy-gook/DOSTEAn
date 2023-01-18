@@ -720,14 +720,6 @@ video {
   width: 10rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -835,9 +827,9 @@ video {
   border-color: rgb(14 165 233 / var(--tw-border-opacity));
 }
 
-.border-\[\#c49b63\] {
+.border-yellow-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(196 155 99 / var(--tw-border-opacity));
+  border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
 .bg-\[\#272727\] {
@@ -1068,6 +1060,11 @@ video {
   color: rgb(39 39 39 / var(--tw-text-opacity));
 }
 
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
 .text-slate-200 {
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity));
@@ -1084,14 +1081,14 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#c49b63\]:hover {
+.hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(196 155 99 / var(--tw-bg-opacity));
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.hover\:text-\[\#c49b63\]:hover {
+.hover\:text-white:hover {
   --tw-text-opacity: 1;
-  color: rgb(196 155 99 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1116,9 +1113,9 @@ video {
     border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
-  .dark\:border-\[\#c49b63\] {
+  .dark\:border-yellow-300 {
     --tw-border-opacity: 1;
-    border-color: rgb(196 155 99 / var(--tw-border-opacity));
+    border-color: rgb(253 224 71 / var(--tw-border-opacity));
   }
 
   .dark\:bg-gray-900 {
@@ -1141,9 +1138,9 @@ video {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
-  .dark\:text-\[\#c49b63\] {
+  .dark\:text-yellow-300 {
     --tw-text-opacity: 1;
-    color: rgb(196 155 99 / var(--tw-text-opacity));
+    color: rgb(253 224 71 / var(--tw-text-opacity));
   }
 
   .dark\:hover\:bg-gray-700:hover {
@@ -1151,9 +1148,9 @@ video {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
-  .dark\:hover\:bg-\[\#c49b63\]:hover {
+  .dark\:hover\:bg-yellow-400:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(196 155 99 / var(--tw-bg-opacity));
+    background-color: rgb(250 204 21 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:text-white:hover {
