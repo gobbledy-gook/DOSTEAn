@@ -2,21 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOSTEAn</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOSTEAn</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <style>
-        .poppinslight {
+  <style>
+    nav,
+    footer {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .poppinslight {
       font-family: 'Poppins', sans-serif;
       font-weight: 100;
     }
@@ -30,161 +35,182 @@
       font-weight: 700;
     }
 
-        .greatvibes{
-            font-family: 'Great Vibes', cursive;
-        }
-     
-    </style>    
+    .greatvibes {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .line{
+      border-bottom: solid 1px #c49b63;
+    }
+  </style>
 </head>
 
 <body bgcolor="#0f0f0f">
 
-    <!-- Navbar -->
-    <nav class="bg-[#272727] border-gray-200 px-52 py-2.5 text-white fixed w-screen">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="" class="flex items-center">
-                <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DOSTEAn</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul
-                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
-                    <li>
-                        <a href="home.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
-                    </li>
-                    <li>
-                        <a href="menu.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Photo
-                            Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#contact_us"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
-                            Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="bg-[#272727] border-gray-200 px-52 py-2.5 text-white fixed w-screen">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="" class="flex items-center">
+        <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DOSTEAn</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
+          <li>
+            <a href="home.html"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="menu.html"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
+          </li>
+          <li>
+            <a href="gallery.html"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Photo
+              Gallery</a>
+          </li>
+          <li>
+            <a href="#contact_us"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+              Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Photo Gallery -->
-    <div class="gallery">
-        <div class="heading text-center pt-32 pb-14">
-            <h2 class = "poppins text-6xl text-[#c49b63]">Photo Gallery</h2>
-        </div>
-        <div class="grid grid-cols-4 gap-1 mx-4 px-8 pb-12">
-            <!-- <div class = "border-solid border-2 border-sky-500">1</div> -->
-            <!-- <div>2</div>
+  <!-- Photo Gallery -->
+  <div class="gallery">
+    <div class="flex flex-row heading text-center pt-32 pb-14 justify-center">
+      <div class = "pr-7">
+        <div class = "line w-32 h-1/2"></div>
+        <div class = "h-1/2"></div>
+      </div>
+      <h2 class="poppins text-5xl text-[#d7ab6e]">Photo Gallery</h2>
+      <div class = "pl-7">
+        <div class = "line w-32 h-1/2"></div>
+        <div class = "h-1/2"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-1 mx-4 px-8 pb-12">
+      <!-- <div class = "border-solid border-2 border-sky-500">1</div> -->
+      <!-- <div>2</div>
             <div>3</div>
             <div>4</div> -->
 
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0052.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0053.jpg" class="w-full h-full" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0054.jpg" class="w-full h-full" ></div>
-            <div class="row-span-2" data-aos="fade-left"><img src="../images/IMG-20230112-WA0066.jpg"></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0056.jpg" class="w-full h-full" ></div>
-            <div data-aos="fade-dwon"><img src="../images/IMG-20230112-WA0057.jpg" class="w-full h-full" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0058.jpg" class="w-full h-full" ></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0059.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0060.jpg" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0061.jpg" ></div>
-            <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0063.jpg" ></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0064.jpg" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0055.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0069.jpg" ></div>
-            <div data-aos="fade-left" class="row-span-2"><img src="../images/IMG-20230112-WA0071.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0072.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0089.jpg" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0094.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0077.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0081.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0082.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0083.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0084.jpg" ></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0086.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0087.jpg" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0088.jpg" ></div>
-            <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0075.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0090.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0091.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0092.jpg" ></div>
-            <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0093.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-right" class="row-span-2"><img src="../images/IMG-20230112-WA0097.jpg" ></div>
-            <div data-aos="fade-up" class="row-span-2"><img src="../images/IMG-20230112-WA0095.jpg" ></div>
-            <div data-aos="fade-down" class="row-span-2"><img src="../images/IMG-20230112-WA0096.jpg" ></div>
-            <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0076.jpg" class="w-full h-full"></div>
-            <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0098.jpg" ></div>
-            <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0099.jpg" ></div>
-            <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0100.jpg" ></div>
-        </div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0052.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0053.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0054.jpg" class="w-full h-full"></div>
+      <div class="row-span-2" data-aos="fade-left"><img src="../images/IMG-20230112-WA0066.jpg"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0056.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-dwon"><img src="../images/IMG-20230112-WA0057.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0058.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0059.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0060.jpg"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0061.jpg"></div>
+      <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0063.jpg"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0064.jpg"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0055.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0069.jpg"></div>
+      <div data-aos="fade-left" class="row-span-2"><img src="../images/IMG-20230112-WA0071.jpg" class="w-full h-full">
+      </div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0072.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0089.jpg"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0094.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0077.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0081.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0082.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0083.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0084.jpg"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0086.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0087.jpg"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0088.jpg"></div>
+      <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0075.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0090.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0091.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0092.jpg"></div>
+      <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0093.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-right" class="row-span-2"><img src="../images/IMG-20230112-WA0097.jpg"></div>
+      <div data-aos="fade-up" class="row-span-2"><img src="../images/IMG-20230112-WA0095.jpg"></div>
+      <div data-aos="fade-down" class="row-span-2"><img src="../images/IMG-20230112-WA0096.jpg"></div>
+      <div data-aos="fade-left"><img src="../images/IMG-20230112-WA0076.jpg" class="w-full h-full"></div>
+      <div data-aos="fade-right"><img src="../images/IMG-20230112-WA0098.jpg"></div>
+      <div data-aos="fade-down"><img src="../images/IMG-20230112-WA0099.jpg"></div>
+      <div data-aos="fade-up"><img src="../images/IMG-20230112-WA0100.jpg"></div>
     </div>
+  </div>
 
- 
-     <!-- Contact Us -->
-     <div class="pt-20 pb-20 text-[#272727] px-16 bg-[#c49b63]" id = "contact_us">
-        <div class="flex flex-wrap">
-          <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-3 w-full md:w-6/12 px-3 lg:px-6 poppins text-[#272727]" data-aos="fade-up">
-            <h2 class="mb-6 poppinsbold text-5xl">Contact us</h2>
-            <p class="mb-6">
-              If you have any further questions or if you would like to make a reservation, please don't hesitate to contact
-              us. Our friendly and professional staff will be happy to assist you.
-              Come visit us and enjoy a delicious cup of coffee and a bite to eat.We look forward to hearing from you and serving you soon!
-            </p>
-            <div class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" w-8 h-7 border-solid border-2 rounded-full p-1">
-                <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-              </svg>          
-              <p class="mb-2">Bungalow No-2, beside Ichhanath Super Store, Jalaram Society, Piplod, Surat,Gujarat 395007</p>
-            </div>
-            <div class="flex gap-3 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" w-7 h-7 border-solid border-2 rounded-full p-1">
-                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
-              </svg>         
-              <p class="mb-2">+91 9737701159</p>
-            </div>
-            <div class="flex gap-3 mt-1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" w-7 h-7 border-solid border-2 rounded-full p-1">
-                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-              </svg>
-              <p class="mb-2">info@gmail.com</p>
-            </div>
-          </div>
-          <div data-aos="fade-up">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7980.8973284630165!2d72.77414039654582!3d21.161379637558866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04da5cd96a645%3A0x570d0a5bf2f181a2!2sDostean%20Cafe%20%26%20restro!5e0!3m2!1sen!2sin!4v1673767630413!5m2!1sen!2sin"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+
+  <!-- Contact Us -->
+  <div class="pt-20 pb-20 text-[#272727] px-16 bg-[#c49b63]" id="contact_us">
+    <div class="flex flex-wrap">
+      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-3 w-full md:w-6/12 px-3 lg:px-6 poppins text-[#272727]"
+        data-aos="fade-up">
+        <h2 class="mb-6 poppinsbold text-5xl">Contact us</h2>
+        <p class="mb-6">
+          If you have any further questions or if you would like to make a reservation, please don't hesitate to contact
+          us. Our friendly and professional staff will be happy to assist you.
+          Come visit us and enjoy a delicious cup of coffee and a bite to eat.We look forward to hearing from you and
+          serving you soon!
+        </p>
+        <div class="flex gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class=" w-8 h-7 border-solid border-2 rounded-full p-1">
+            <path fill-rule="evenodd"
+              d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+              clip-rule="evenodd" />
+          </svg>
+          <p class="mb-2">Bungalow No-2, beside Ichhanath Super Store, Jalaram Society, Piplod, Surat,Gujarat 395007</p>
+        </div>
+        <div class="flex gap-3 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class=" w-7 h-7 border-solid border-2 rounded-full p-1">
+            <path fill-rule="evenodd"
+              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+              clip-rule="evenodd" />
+          </svg>
+          <p class="mb-2">+91 9737701159</p>
+        </div>
+        <div class="flex gap-3 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class=" w-7 h-7 border-solid border-2 rounded-full p-1">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+          <p class="mb-2">info@gmail.com</p>
         </div>
       </div>
+      <div data-aos="fade-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7980.8973284630165!2d72.77414039654582!3d21.161379637558866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04da5cd96a645%3A0x570d0a5bf2f181a2!2sDostean%20Cafe%20%26%20restro!5e0!3m2!1sen!2sin!4v1673767630413!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="text-center p-4 bg-[#272727] shadow md:p-6">
-        <span class="text-sm text-white-700 dark:text-white">© 2023 DOSTEAn. All Rights Reserved.
-        </span>
-    </footer>
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-[#272727] shadow md:p-6">
+    <span class="text-sm text-white-700 dark:text-white">© 2023 DOSTEAn. All Rights Reserved.
+    </span>
+  </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
