@@ -50,9 +50,9 @@
     }
 
     .nav-transparent {
-        background-color:transparent;
-        border-bottom: solid 0.5px #c6c6c636;
-      }
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    }
 
     @media (min-width: 768px) {
       .nav-transparent {
@@ -77,7 +77,7 @@
     }
 
     .carousel-container {
-      width: 1100px;
+      width: 95%;
       margin: 50px auto;
       position: relative;
       /* border-left-width: 4px; */
@@ -92,28 +92,42 @@
     }
 
     .inner-carousel {
-      width: 100%;
-      height: 500px;
+      width: 95%;
+      height: 100%;
       overflow: hidden;
     }
 
     .track {
       display: inline-flex;
       height: 100%;
-      transition: transform 0.2s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .card-container {
-      width: 366.7px;
-      height: 450px;
+      width: 33%;
+      height: 100%;
       flex-shrink: 0;
-      padding-right: 20px;
-      padding-left: 20px
+      padding-right: 40px;
+      padding-left: 40px
     }
 
     @media (max-width: 768px) {
       .card-container {
-        width: 184px;
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 5px;
+        padding-left: 5px
+      }
+    }
+
+    @media (max-width: 920px) {
+      .card-container {
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 10px;
+        padding-left: 10px
       }
     }
 
@@ -142,8 +156,39 @@
       cursor: pointer;
     }
 
+    @media (max-width: 768px) {
+      .nav button {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        outline: none;
+        /* border: 1px solid #000; */
+        cursor: pointer;
+      }
+
+      .nav .next {
+        right: -40px;
+      }
+
+      .nav .prev {
+        left: -20px;
+        display: none;
+      }
+
+      .nav .prev.show {
+        display: block;
+      }
+
+      .nav .next.hide {
+        display: none;
+      }
+    }
+
     .nav .prev {
-      left: -30px;
+      left: -25px;
       display: none;
     }
 
@@ -152,7 +197,7 @@
     }
 
     .nav .next {
-      right: -30px;
+      right: -25px;
     }
 
     .nav .next.hide {
@@ -163,7 +208,7 @@
 
 <body bgcolor="#0f0f0f">
   <!-- Navbar -->
-  <nav id="nav" class="nav-transparent border-gray-200 px-28 py-2.5 fixed w-full z-10 poppins">
+  <nav id="nav" class="nav-transparent border-gray-200 px-10 py-2.5 fixed w-full z-10 poppins">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="" class="flex items-center">
         <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
@@ -354,8 +399,8 @@
         </div>
         <div class="nav">
           <button class="prev bg-white poppins"><i class="fas fa-arrow-left fa-2x">
-              <</i></button>
-          <button class="next bg-[#c49b63] poppins"><i class="fas fa-arrow-right fa-2x">></i></button>
+              <</i</button>
+          <button class="next bg-[#c49b63] poppins"><i class="fas fa-arrow-right fa-2x -right-96">></i></button>
         </div>
       </div>
     </div>
@@ -467,7 +512,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center p-4 bg-[#272727] shadow md:p-6">
+  <footer class="text-center p-4 nav-colored shadow md:p-6">
     <span class="text-sm text-white ">© 2023 DOSTEAn. All Rights Reserved.
     </span>
   </footer>
