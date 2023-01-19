@@ -103,19 +103,16 @@
         }
 
         .hovermenu1 {
-            margin-right: 26%;
+            /* margin-right: 26%; */
             background-color: rgba(0, 0, 0, 0.749);
-            height: 100%;
         }
 
         .hovermenu2 {
             position: relative;
-            width: 40%;
             height: 600px;
             background-color: #71717137;
             overflow-y: scroll;
             overflow-x: hidden;
-            margin: 0px;
         }
 
         .hovermenu2::-webkit-scrollbar {
@@ -162,15 +159,101 @@
             width: 50%;
             padding: 0px;
         }
+        @media screen and (min-width: 1170px) {
+            .hovermenu2 {
+               left:0%;
+            }
+         }
 
-        .nav-transparent {
-            background-color: #151515;
-        }
+        @media screen and (min-width: 1320px) {
+            .hovermenu2 {
+               left:10%;
+            }
+         }
 
-        .nav-colored {
-            background-color: #151515;
+        @media screen and (min-width: 1680px) {
+            .hovermenu2 {
+               left:26%;
+            }
+         }
+         @media screen and (max-width: 1170px) {
+            .hovermenu1 {
+               width:100%;
+               flex-direction: row;
+            }
+            header{
+                flex-direction: column;
+            }
+            .phone_coltorow{
+                display:flex;
+                flex-direction:row;
+            }
+            .div_rowtocol{
+                flex-direction: column;
+            }
+            .hovermenu2{
+                height:375px;
+                margin-top:15px;
+                width:600px;
+            }
+         }
 
-        }
+         @media screen and (min-width: 1170px) {
+            .hovermenu1 {
+                height: 100%;
+            }
+            header{
+                flex-direction: row;
+            }
+            .phone_coltorow{
+                display:flex;
+                flex-direction:column;
+            }
+            .div_rowtocol{
+                flex-direction: row;
+            }
+         }
+
+         @media screen and (max-width: 600px){
+            .hovermenu2{
+                height:380px;
+                margin-top:15px;
+                width:400px;
+            }
+         }
+
+         @media screen and (max-width: 700px){
+            .btn2{
+                width:300px;
+            }
+         }
+
+         @media screen and (max-width: 500px){
+            .btn2{
+                width:220px;
+            }
+         }
+
+         @media screen and (max-width: 445px){
+            .div_rowtocol{
+                width:445px;
+            }
+         }
+
+         @media screen and (max-width: 400px){
+            .hovermenu2{
+                height:380px;
+            }
+         }
+
+         @media screen and (max-height: 700px){
+            .hovermenu2{
+                height:190px;
+                margin-top:15px;
+                width:400px;
+            }
+         }
+
     </style>
 </head>
 
@@ -217,9 +300,9 @@
             </div>
         </div>
     </nav>
-    <header class="flex h-screen bg-center bg-cover custom-img pt-10 relative flex-row">
-        <div class="flex pt-8 text-2xl items-center text-slate-200 col-md-7 col-sm-12 text-center w-screen flex-row">
-            <div class="flex items-center hovermenu1">
+    <header class="flex h-screen bg-center bg-cover custom-img pt-10 relative">
+        <div class="flex pt-8 text-2xl items-center text-slate-200 col-md-7 col-sm-12 text-center w-screen div_rowtocol">
+            <div class="flex items-center flex-col hovermenu1">
                 <div class="flex flex-col items-center poppins_light">
                     <div class="clipart">
                         <img src="../images/hotchocolatepng.png" width="125">
@@ -229,22 +312,27 @@
                             <h1 class="fullwidth satisfy text-center"><b class="fullwidth">OUR MENU</b></h1>
                         </div>
                     </div>
-                    <div><button class="btn2 p-5 " id="BandD" onclick="reveal('Beverages_and_Deserts')">Beverages and
-                            Desserts</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Starters')">Starters</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Italian')">Italian</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Indian')">Indian</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Chinese')">Chinese</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Continental')">Continental</button></div>
-                    <div><button class="btn2  p-5 " onclick="reveal('Others')">Others</button></div>
+                    <div class="phone_coltorow">
+                        <div>
+                            <div><button class="btn2 p-5 " id="BandD" onclick="reveal('Beverages_and_Deserts')">Beverages and Desserts</button></div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Starters')">Starters</button></div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Italian')">Italian</button></div>
+                        </div>
+                        <div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Indian')">Indian</button></div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Chinese')">Chinese</button></div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Continental')">Continental</button></div>
+                            <div><button class="btn2  p-5 " onclick="reveal('Others')">Others</button></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hovermenu2 inline-block pt-20 scrollbar-thin scrollbar-thumb-blue-500" id="hovermenu2">
+            <div class="min-[1000px]:w-[600px] min[1680px]:left-[26%] hovermenu2 inline-block pt-20" id="hovermenu2">
                 <div class="hovermenu2inner p-0 pt-20 m-0">
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv hovermenudivdefault"
                         id="Beverages_and_Deserts">
-                        <h1 class="px-8 text-5xl justify-center lobster">Mocktail</h1>
-                        <div class="px-8 py-3 grid grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Mocktail</h1>
+                        <div class="px-8 around py-3 grid grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Mojito</span></h2>
                             </div>
@@ -253,7 +341,7 @@
                                 <p class="poppins_light">All time favorite refreshing drink</p>
                             </div>
                         </div>
-                        <div class="px-8 my-1 py-3 grid grid-cols-2">
+                        <div class="px-8 around my-1 py-3 grid grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Watermelon Mojito</span></h2>
                             </div>
@@ -262,7 +350,7 @@
                                 <p class="poppins_light">Refreshment and tummy cooler comes together</p>
                             </div>
                         </div>
-                        <div class="px-8 my-1 grid py-3 grid-cols-2">
+                        <div class="px-8 around my-1 grid py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Orange Mojito</span></h2>
                             </div>
@@ -271,7 +359,7 @@
                                 <p class="poppins_light">Tangy flavor of orange along with mint</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Berry Lemonade</span></h2>
                             </div>
@@ -280,7 +368,7 @@
                                 <p class="poppins_light">Cranberry flavor and lemeonade combo</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Orange</span></h2>
                             </div>
@@ -289,7 +377,7 @@
                                 <p class="poppins_light">Need spicy touch lets try it</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Beer Mocktail</span></h2>
                             </div>
@@ -298,7 +386,7 @@
                                 <p class="poppins_light">Non alcoholic drink beer flavoured</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Kala Khatta</span></h2>
                             </div>
@@ -307,7 +395,7 @@
                                 <p class="poppins_light">Original kala Khayya with the twist of mocktail</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Lemonade</span></h2>
                             </div>
@@ -316,7 +404,7 @@
                                 <p class="poppins_light">refreshing lemondade</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Kaccha Aam</span></h2>
                             </div>
@@ -325,7 +413,7 @@
                                 <p class="poppins_light">Raw mango flavor on cool mocktail</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Imli</span></h2>
                             </div>
@@ -334,75 +422,75 @@
                                 <p class="poppins_light">Bachpan ki yaado ke saath</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Shakes</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Shakes</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Nutella Shake</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">249.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Oreo Shake</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">219.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>KitKat Shake</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">239.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chocolate Shake</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">219.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Rose Faluda</span></h2>
                             </div>
                             <span class="price px-40 text-2xl">199.00</span>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Hot Coffee</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Hot Coffee</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Black Coffee</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">35.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Milk Coffee</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">36.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chocolate Coffee</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">65.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hot Chocolate with Biscuit Cup</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">60.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Hot Chocolate</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">70.00</span>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Tea</h1>
+                        <h1 class="px-8 around text-5xl justify-center lobster">Tea</h1>
                         <div class="flex flex-row">
                             <div class="inline-block" style="width:56%;"></div>
                             <div class="inline-block pr-12">small</div>
                             <div class="inline-block">large</div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Make Your Own tea</span></h2>
                             </div>
@@ -414,7 +502,7 @@
                                 <p class="poppins_light">(Ginger, Pudina, Elaichi)</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sukun Wali Chai</span></h2>
                             </div>
@@ -426,7 +514,7 @@
 
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chocolate Chai</span></h2>
                             </div>
@@ -438,7 +526,7 @@
 
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Green Tea</span></h2>
                             </div>
@@ -450,45 +538,45 @@
 
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Bevarages</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Bevarages</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cold Drink</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">38.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lemon Ice Tea</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">129.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peach Ice Tea</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">138.00</span>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Dessert</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Dessert</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mud Brownie</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">119.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sizzling Brownie</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">199.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pan Cake</span></h2>
                             </div>
                             <span class="price px-40 text-2xl poppins_light">139.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sizzling Chocolate</span></h2>
                             </div>
@@ -497,8 +585,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Starters">
-                        <h1 class="px-8 text-5xl justify-center lobster">Soup</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Soup</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Manchow</span></h2>
                             </div>
@@ -507,7 +595,7 @@
                                 <p class="poppins_light">Flavored classic chinese soup</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hot N Sour</span></h2>
                             </div>
@@ -516,7 +604,7 @@
                                 <p class="poppins_light">Spiciness of chilly and tangy taste citric</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lemon Coriander</span></h2>
                             </div>
@@ -525,7 +613,7 @@
                                 <p class="poppins_light">Refreshing flavor with bite of coriander and garlic</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic Soup</span></h2>
                             </div>
@@ -534,8 +622,8 @@
                                 <p class="poppins_light">Mid spicy soup accomplished flavor of burnt garlic</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Sandwich</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Sandwich</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Veg</span></h2>
                             </div>
@@ -544,7 +632,7 @@
                                 <p class="poppins_light">Freshly cut veggies sandwich like Mumbai</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Cheese</span></h2>
                             </div>
@@ -553,7 +641,7 @@
                                 <p class="poppins_light">Freshly cut veggies sandwich like Mumbai topped with cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Grill</span></h2>
                             </div>
@@ -562,7 +650,7 @@
                                 <p class="poppins_light">Masala cheese grill sandwich flavored spicy and chatpata</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Bread Butter-Jam,Chatni</span></h2>
                             </div>
@@ -571,7 +659,7 @@
                                 <p class="poppins_light">Craving cutter with choice of flavors</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Toast</span></h2>
                             </div>
@@ -581,7 +669,7 @@
                                     cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Toast</span></h2>
                             </div>
@@ -591,7 +679,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Dostea Special Toast sandwich</span></h2>
                             </div>
@@ -601,8 +689,8 @@
                                 </p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Bread</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Bread</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>paneer makhni garlic</span></h2>
                             </div>
@@ -611,7 +699,7 @@
                                 <p class="poppins_light">Makhni flavor cottage cheese topped on garlic bread</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Crostini - Two Flavors</span></h2>
                             </div>
@@ -620,7 +708,7 @@
                                 <p class="poppins_light">Two flavor bread topped with cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Spicy Garlic Bread</span></h2>
                             </div>
@@ -629,7 +717,7 @@
                                 <p class="poppins_light">Bread topped with in house special sprinklers</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheese Garlic Bread</span></h2>
                             </div>
@@ -638,7 +726,7 @@
                                 <p class="poppins_light">Classic Cheese Bread</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>OTC Garlic Bread</span></h2>
                             </div>
@@ -647,7 +735,7 @@
                                 <p class="poppins_light">Garlic bread topped with vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pulled Cheese Garlic Bread</span></h2>
                             </div>
@@ -656,8 +744,8 @@
                                 <p class="poppins_light">House special garlic bread</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Fries</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Fries</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Plain-chatpata peri peri</span></h2>
                             </div>
@@ -666,7 +754,7 @@
                                 <p class="poppins_light">Fries with the choice of flavor</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheesy</span></h2>
                             </div>
@@ -675,7 +763,7 @@
                                 <p class="poppins_light">Cheese loaded fries</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Garlic Fries</span></h2>
                             </div>
@@ -684,33 +772,33 @@
                                 <p class="poppins_light">Fries toasted with garlic and chilly</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Accomplishments</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Accomplishments</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Roasted Papad</span></h2>
                             </div>
                             <span class="price px-40 text-2xl">19.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Fried Papad</span></h2>
                             </div>
                             <span class="price px-40 text-2xl">36.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Papad</span></h2>
                             </div>
                             <span class="price px-40 text-2xl">48.00</span>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Green Salad</span></h2>
                             </div>
                             <span class="price px-40 text-2xl">119.00</span>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Salad</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Salad</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Greek Farmer Salad</span></h2>
                             </div>
@@ -720,7 +808,7 @@
                                     with cheese and olives</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Cesar Salad</span></h2>
                             </div>
@@ -730,7 +818,7 @@
                                     Parmesan cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sautéed Cottage Cheese</span></h2>
                             </div>
@@ -739,7 +827,7 @@
                                 <p class="poppins_light">High protien salad best for healthy eaters</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sautéed Mushroom</span></h2>
                             </div>
@@ -751,8 +839,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Continental">
-                        <h1 class="px-8 text-5xl justify-center lobster">Continental</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Continental</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Chilly Beans</span></h2>
                             </div>
@@ -761,7 +849,7 @@
                                 <p class="poppins_light">Soup load with mexican flavor nd bite of nachos</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cream of Tomato</span></h2>
                             </div>
@@ -770,7 +858,7 @@
                                 <p class="poppins_light">Mid taste classic creamy tomato soup</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Corn Cheese Ball</span></h2>
                             </div>
@@ -779,7 +867,7 @@
                                 <p class="poppins_light">Mid taste classic creamy tomato soup</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Croquettes</span></h2>
                             </div>
@@ -788,7 +876,7 @@
                                 <p class="poppins_light">Roasted corn stuff with cheese and spice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Aranchini Balls</span></h2>
                             </div>
@@ -797,7 +885,7 @@
                                 <p class="poppins_light">Deep fried balls stuff with exotic vegetables and cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Baffalo Cottage Cheese</span></h2>
                             </div>
@@ -806,7 +894,7 @@
                                 <p class="poppins_light">Deep fried paneer toasted in famous baffalo sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Satay</span></h2>
                             </div>
@@ -815,7 +903,7 @@
                                 <p class="poppins_light">Pan toasted paneer and vegetables serve with house sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Khichiya</span></h2>
                             </div>
@@ -824,7 +912,7 @@
                                 <p class="poppins_light">Khichiya papad with fusion of Indian and Continental</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Masala Kurkuri bites</span></h2>
                             </div>
@@ -834,7 +922,7 @@
                                     along with cheese sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Beans Nachos</span></h2>
                             </div>
@@ -843,7 +931,7 @@
                                 <p class="poppins_light">Nachos served with Mexican stuffing and sour cream</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheese Nachos</span></h2>
                             </div>
@@ -852,7 +940,7 @@
                                 <p class="poppins_light">Nachos stuff with two type of cheese sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cottage cheese taxo nachos</span></h2>
                             </div>
@@ -861,7 +949,7 @@
                                 <p class="poppins_light">Nachos served with Cottage cheese guacamole</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Quesadilla</span></h2>
                             </div>
@@ -871,8 +959,8 @@
                                     cheese</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Continental Rice</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Continental Rice</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Burrito Bowl</span></h2>
                             </div>
@@ -881,7 +969,7 @@
                                 <p class="poppins_light">Mexican rice served with curry n salsa</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cilantro Rice with Garlic Sauce</span></h2>
                             </div>
@@ -891,7 +979,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Herb Rice with cheese sauce</span></h2>
                             </div>
@@ -903,8 +991,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Chinese">
-                        <h1 class="px-8 text-5xl justify-center lobster">Chinese</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Chinese</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Manchurian</span></h2>
                             </div>
@@ -913,7 +1001,7 @@
                                 <p class="poppins_light">Vegetable balls toasted in classic sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Green Manchurian</span></h2>
                             </div>
@@ -922,7 +1010,7 @@
                                 <p class="poppins_light">Vegetable balls toasted with chinese spinach sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chilly</span></h2>
                             </div>
@@ -931,7 +1019,7 @@
                                 <p class="poppins_light">Coated fried paneer toasted in classy chilly sauce</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>BBQ Paneer</span></h2>
                             </div>
@@ -940,7 +1028,7 @@
                                 <p class="poppins_light">Smoky flavor oriental style paneer</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Crispy</span></h2>
                             </div>
@@ -949,8 +1037,8 @@
                                 <p class="poppins_light">Crunchy vegetables toasted with mid spicy sauce</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Chinese Rice</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Chinese Rice</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Fried Rice</span></h2>
                             </div>
@@ -959,7 +1047,7 @@
                                 <p class="poppins_light">Classic aromatic Chinese rice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Schezwan Rice</span></h2>
                             </div>
@@ -968,7 +1056,7 @@
                                 <p class="poppins_light">Oriental spicy rice with vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic</span></h2>
                             </div>
@@ -977,7 +1065,7 @@
                                 <p class="poppins_light">Aroma and taste of burnt garlic in oriental rice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Triple Rice</span></h2>
                             </div>
@@ -986,8 +1074,8 @@
                                 <p class="poppins_light">Three types of rice along with veg exotic gravy</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Noodles</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Noodles</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hakka Noodles</span></h2>
                             </div>
@@ -996,7 +1084,7 @@
                                 <p class="poppins_light">Classic aromatic chinese noodles</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic Noodles</span></h2>
                             </div>
@@ -1005,7 +1093,7 @@
                                 <p class="poppins_light">Noodles toasted vegetables with burnt garlic</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Schezwan Noodles</span></h2>
                             </div>
@@ -1014,8 +1102,8 @@
                                 <p class="poppins_light">Spicy aromatic noodles</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Chinese Gravy</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Chinese Gravy</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Gravy Manchurian</span></h2>
                             </div>
@@ -1024,7 +1112,7 @@
                                 <p class="poppins_light">Vegetable balls served with classic manchurian gravy</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Exotic Veg in Garlic Sauce</span></h2>
                             </div>
@@ -1033,7 +1121,7 @@
                                 <p class="poppins_light">Roasted Veg served with Garlic sauce gravy</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chilly Gravy</span></h2>
                             </div>
@@ -1045,8 +1133,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Italian">
-                        <h1 class="px-8 text-5xl justify-center lobster">Pizza</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Pizza</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Margarita</span></h2>
                             </div>
@@ -1055,7 +1143,7 @@
                                 <p class="poppins_light">Classic cheese Pizza topped with Tomato and basil</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pepper Pizza</span></h2>
                             </div>
@@ -1064,7 +1152,7 @@
                                 <p class="poppins_light">5 types of peppers on pizza</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Garden Fresh</span></h2>
                             </div>
@@ -1073,7 +1161,7 @@
                                 <p class="poppins_light">Load with full exotic vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Paneer Pizza</span></h2>
                             </div>
@@ -1082,7 +1170,7 @@
                                 <p class="poppins_light">Need spicy pizza this is the best choice for you</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Tikka Pizza</span></h2>
                             </div>
@@ -1091,7 +1179,7 @@
                                 <p class="poppins_light">Paneer on top along with Indian spices flavor</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hawaiian Pizza</span></h2>
                             </div>
@@ -1100,7 +1188,7 @@
                                 <p class="poppins_light">Jalapeno Pineapple topped on pizza</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican</span></h2>
                             </div>
@@ -1109,8 +1197,8 @@
                                 <p class="poppins_light">Fusion of Italian n Mexican taste together</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Pasta</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Pasta</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Creamy Cheese</span></h2>
                             </div>
@@ -1119,7 +1207,7 @@
                                 <p class="poppins_light">Classic bechamel cheese sauce pasta with exotic vegies</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pica to Redasto</span></h2>
                             </div>
@@ -1128,7 +1216,7 @@
                                 <p class="poppins_light">Combination of two sauce with mid spicy n cheese flavor</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tomatino Basil</span></h2>
                             </div>
@@ -1137,8 +1225,8 @@
                                 <p class="poppins_light">classic arrabiata sauce flavored with basil</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Baked Dish</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Baked Dish</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Corn Spinach Lasagna</span></h2>
                             </div>
@@ -1147,7 +1235,7 @@
                                 <p class="poppins_light">Roasted corn and spinach baked with lots of cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Makhni Lasagna</span></h2>
                             </div>
@@ -1156,7 +1244,7 @@
                                 <p class="poppins_light">Mexican authentic backed dish</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Enchiladas</span></h2>
                             </div>
@@ -1168,8 +1256,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Indian">
-                        <h1 class="px-8 text-5xl justify-center lobster">Indian Curry</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Indian Curry</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Butter Masala</span></h2>
                             </div>
@@ -1178,7 +1266,7 @@
                                 <p class="poppins_light">Rich Makhni gravy with mild taste</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chatpata</span></h2>
                             </div>
@@ -1187,7 +1275,7 @@
                                 <p class="poppins_light">Spicy and tangy cottage cheese serve with vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Angara</span></h2>
                             </div>
@@ -1196,7 +1284,7 @@
                                 <p class="poppins_light">Spicy paneer with Julian vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mix Veg</span></h2>
                             </div>
@@ -1205,7 +1293,7 @@
                                 <p class="poppins_light">Onion gravy with bunch of veggies</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Khima</span></h2>
                             </div>
@@ -1214,7 +1302,7 @@
                                 <p class="poppins_light">Mid spicy makhni gravy with fine chopped vegetables</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lahsooni Kofta</span></h2>
                             </div>
@@ -1223,7 +1311,7 @@
                                 <p class="poppins_light">Rich brown gravy with flavour of burnt garlic</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Jeera Aloo</span></h2>
                             </div>
@@ -1232,7 +1320,7 @@
                                 <p class="poppins_light">Boiled aloo with cumin and chilly tadka</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Dal Tadka</span></h2>
                             </div>
@@ -1241,8 +1329,8 @@
                                 <p class="poppins_light">Dal topped with red paprika and butter</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Indian - Rice</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Indian - Rice</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Jeera rice</span></h2>
                             </div>
@@ -1251,7 +1339,7 @@
                                 <p class="poppins_light">Hot aromatic rice with cumin tadka</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Pulao</span></h2>
                             </div>
@@ -1260,7 +1348,7 @@
                                 <p class="poppins_light">Mix veg pulao with aromatic flavour</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Biryani</span></h2>
                             </div>
@@ -1269,7 +1357,7 @@
                                 <p class="poppins_light">Desi aromatic rice with veg gravy combination</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg raita</span></h2>
                             </div>
@@ -1278,8 +1366,8 @@
                                 <p class="poppins_light">Chopped vegetables and aromatic spice</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Indian - Bread</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Indian - Bread</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Malabar Paratha</span></h2>
                             </div>
@@ -1288,7 +1376,7 @@
                                 <p class="poppins_light">South Indian style paratha</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tava Roti</span></h2>
                             </div>
@@ -1297,7 +1385,7 @@
                                 <p class="poppins_light">Desi tava roti home style</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mix Veg Paratha</span></h2>
                             </div>
@@ -1306,7 +1394,7 @@
                                 <p class="poppins_light">Chopped veg stuffed paratha</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Paratha</span></h2>
                             </div>
@@ -1315,8 +1403,8 @@
                                 <p class="poppins_light">Grated paneer and veggies stuffed paratha</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Samosa</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Samosa</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Samosa</span></h2>
                             </div>
@@ -1328,8 +1416,8 @@
                     </div>
 
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv" id="Others">
-                        <h1 class="px-8 text-5xl justify-center lobster">Wrap</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Wrap</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Healthy Veg wrap</span></h2>
                             </div>
@@ -1339,7 +1427,7 @@
                                     carb</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Burrito Wrap</span></h2>
                             </div>
@@ -1349,7 +1437,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tandoori Paneer Shawarma Wrap</span></h2>
                             </div>
@@ -1358,7 +1446,7 @@
                                 <p class="poppins_light">Shawarma with the twist taste along with Indian Spice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mushroom wrap</span></h2>
                             </div>
@@ -1367,7 +1455,7 @@
                                 <p class="poppins_light">Sautéed mushroom stuff along with toasted vegies and cheese</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel Wrap</span></h2>
                             </div>
@@ -1376,7 +1464,7 @@
                                 <p class="poppins_light">Classic wrap stuff with Falafel and hummus</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel Pocket</span></h2>
                             </div>
@@ -1386,8 +1474,8 @@
                                     sour cream</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Lebanese</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Lebanese</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hummus Platter</span></h2>
                             </div>
@@ -1397,7 +1485,7 @@
                                     accomplishments</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel platter</span></h2>
                             </div>
@@ -1406,8 +1494,8 @@
                                 <p class="poppins_light">Platter served with falafel hummus and accomplishment</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Buns</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Buns</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Plain Maska Bun</span></h2>
                             </div>
@@ -1416,7 +1504,7 @@
                                 <p class="poppins_light">Best combination with tea</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Maska bun</span></h2>
                             </div>
@@ -1425,7 +1513,7 @@
                                 <p class="poppins_light">Bun servers with lots of butter and Indian species</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Maska bun</span></h2>
                             </div>
@@ -1434,7 +1522,7 @@
                                 <p class="poppins_light">Sweetness of bun along with in house special spice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tandoori Maska Bun</span></h2>
                             </div>
@@ -1443,8 +1531,8 @@
                                 <p class="poppins_light">Indian taste lover</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Maggie</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Maggie</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Masala</span></h2>
                             </div>
@@ -1453,7 +1541,7 @@
                                 <p class="poppins_light">Classic maggie with veggies and spice</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Double Masala</span></h2>
                             </div>
@@ -1462,7 +1550,7 @@
                                 <p class="poppins_light">Maggie with double masala flavour and veggies</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Exotic Maggie</span></h2>
                             </div>
@@ -1471,7 +1559,7 @@
                                 <p class="poppins_light">Chopped exotic veggies and spices</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Garlic Maggie</span></h2>
                             </div>
@@ -1480,7 +1568,7 @@
                                 <p class="poppins_light">Spicy flavour maggie</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>BBQ Maggie</span></h2>
                             </div>
@@ -1489,8 +1577,8 @@
                                 <p class="poppins_light">Maggie with veggies and barbecue flavour</p>
                             </div>
                         </div>
-                        <h1 class="px-8 text-5xl justify-center lobster">Sizzler</h1>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <h1 class="px-8 around text-5xl justify-center lobster">Sizzler</h1>
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Sizzler</span></h2>
                             </div>
@@ -1500,7 +1588,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Herb Sizzler</span></h2>
                             </div>
@@ -1510,7 +1598,7 @@
                                     and fries</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Oriental Sizzler</span></h2>
                             </div>
@@ -1520,7 +1608,7 @@
                                     Sautéedveg and fries</p>
                             </div>
                         </div>
-                        <div class="px-8 grid my-1 py-3 grid-cols-2">
+                        <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pasta in Pasta</span></h2>
                             </div>
