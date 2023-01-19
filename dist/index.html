@@ -5,18 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOSTEAn : Gallery</title>
-  <link rel="shortcut icon" type="imagesx-icon" href="//../images/Dostean-logo.ico" />
-  <link rel="stylesheet" href="//../css/style.css">
+  <title>DOSTEAn</title>
+  <link rel="shortcut icon" type="imagesx-icon" href="/../images/Dostean-logo.ico" />
+  <link rel="stylesheet" href="/../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/../css/slider.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
-
 
   <style>
     nav,
@@ -38,28 +35,183 @@
       font-weight: 700;
     }
 
-    .greatvibes {
-      font-family: 'Great Vibes', cursive;
+    body {
+      overflow-x: clip;
     }
 
-    .line {
-      border-bottom: solid 1px #c49b63;
+    .parallax {
+      background-image: url('../images/parallax-bg.jpg');
+      padding: 0;
+    }
+
+    .nav-colored {
+      background-color: #151515;
+
     }
 
     .nav-transparent {
-        background-color:#151515;
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    }
+
+    @media (min-width: 768px) {
+      .nav-transparent {
+        background-color: transparent;
+        border-bottom: solid 0.5px #c6c6c636;
+      }
+    }
+
+    /* .nav-transparent {
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    } */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .carousel-container {
+      width: 95%;
+      margin: 50px auto;
+      position: relative;
+      /* border-left-width: 4px; */
+      /* border-left-style: solid;
+  border-left-color: #aaa; */
+    }
+
+    @media (max-width: 768px) {
+      .carousel-container {
+        width: 95%;
+      }
+    }
+
+    .inner-carousel {
+      width: 95%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .track {
+      display: inline-flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card-container {
+      width: 33%;
+      height: 100%;
+      flex-shrink: 0;
+      padding-right: 40px;
+      padding-left: 40px
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 5px;
+        padding-left: 5px
+      }
+    }
+
+    @media (max-width: 920px) {
+      .card-container {
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 10px;
+        padding-left: 10px
+      }
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+      background-position: center bottom;
+      background-size: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+    }
+
+    .nav button {
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      outline: none;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav button {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        outline: none;
+        /* border: 1px solid #000; */
+        cursor: pointer;
       }
 
+      .nav .next {
+        right: -40px;
+      }
+
+      .nav .prev {
+        left: -20px;
+        display: none;
+      }
+
+      .nav .prev.show {
+        display: block;
+      }
+
+      .nav .next.hide {
+        display: none;
+      }
+    }
+
+    .nav .prev {
+      left: -25px;
+      display: none;
+    }
+
+    .nav .prev.show {
+      display: block;
+    }
+
+    .nav .next {
+      right: -25px;
+    }
+
+    .nav .next.hide {
+      display: none;
+    }
   </style>
 </head>
 
 <body bgcolor="#0f0f0f">
-
   <!-- Navbar -->
-  <nav id="nav" class="nav-transparent border-gray-200 px-28 py-2.5 fixed w-full z-10 poppins">
+  <nav id="nav" class="nav-transparent border-gray-200 px-10 py-2.5 fixed w-full z-10 poppins">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="" class="flex items-center">
-        <img src="//../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
+        <img src="/../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">DOSTEAn</span>
       </a>
       <button data-collapse-toggle="navbar-default" type="button"
@@ -73,20 +225,20 @@
             clip-rule="evenodd"></path>
         </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div class="hidden w-full md:block md:w-auto bg-[#151515] md:bg-transparent" id="navbar-default">
         <ul
-          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
+          class="flex flex-col p-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
           <li>
-            <a href="/../index.html"
-              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Home</a>
+            <a href="/home.html"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-[#c49b63]">Home</a>
           </li>
           <li>
             <a href="/menu.html"
-              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0 ">Menu</a>
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Menu</a>
           </li>
           <li>
             <a href="/gallery.html"
-              class="block py-2 pl-3 pr-4 rounded text-[#c49b63] hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Photo
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Photo
               Gallery</a>
           </li>
           <li>
@@ -99,87 +251,159 @@
     </div>
   </nav>
 
-  <!-- Photo Gallery -->
-  <div class="gallery">
-    <div class="flex flex-row heading text-center pt-32 pb-14 justify-center">
-      <div class="pr-7">
-        <div class="line w-32 h-1/2"></div>
-        <div class="h-1/2"></div>
-      </div>
-      <h2 class="poppins text-5xl text-[#d7ab6e]">Photo Gallery</h2>
-      <div class="pl-7">
-        <div class="line w-32 h-1/2"></div>
-        <div class="h-1/2"></div>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 mx-4 px-8 pb-12">
 
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0052.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0053.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0054.jpg" class="w-full h-full"></div>
-      <div class="row-span-2" data-aos="fade-left"><img src="/../images/IMG-20230112-WA0066.jpg"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0056.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-dwon"><img src="/../images/IMG-20230112-WA0057.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0058.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0059.jpg"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0060.jpg"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0061.jpg"></div>
-      <div data-aos="fade-left"><img src="/../images/IMG-20230112-WA0063.jpg"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0064.jpg"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0055.jpg"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0069.jpg"></div>
-      <div data-aos="fade-left" class="row-span-2"><img src="/../images/IMG-20230112-WA0071.jpg" class="w-full h-full">
+  <div class="poppins pt-" id="mySlider" data-aos="fade-in"></div>
+
+
+  <!-- History -->
+  <div class="md:flex md:flex-row" data-aos="fade-in">
+    <div class="justify-center items-center basis-1/2" data-aos="fade-up">
+      <img src="/../images/photo-1.jpg" alt="" class="h-full object-cover">
+    </div>
+
+    <div class="bg-[#c49b63] flex justify-center items-center basis-1/2 py-16">
+      <div class="px-20">
+        <div data-aos="fade-up">
+          <span class="poppinslight text-4xl">Discover</span>
+          <h2 class="poppinsbold text-5xl">Our History</h2>
+        </div>
+        <div data-aos="fade-up">
+          <br>
+          <p class="poppins text">
+            It is surat based startup started on 15 September 2020 by 3 friends who are tea lover so they started there
+            own cafe franchise of Gujarat first eatable biscuit cup cafe. In which u drink the tea / hot chocolate and
+            the cup which in we serve is eatable ☕️. We have good ambiance successfully running business from last 2
+            year.
+          </p>
+        </div>
       </div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0072.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0089.jpg"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0094.jpg"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0077.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0081.jpg"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0082.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0083.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-left"><img src="/../images/IMG-20230112-WA0084.jpg"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0086.jpg"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0087.jpg"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0088.jpg"></div>
-      <div data-aos="fade-left"><img src="/../images/IMG-20230112-WA0075.jpg" class="w-full h-full object-cover"></div>
-      <div data-aos="fade-right"><img src="/../images/IMG-20230112-WA0090.jpg" class="w-full h-full object-cover"></div>
-      <div data-aos="fade-down"><img src="/../images/IMG-20230112-WA0091.jpg" class="w-full h-full object-cover"></div>
-      <div data-aos="fade-up"><img src="/../images/IMG-20230112-WA0092.jpg" class="object-cover"></div>
-      <div data-aos="fade-left"><img src="/../images/IMG-20230112-WA0093.jpg" class="w-full h-full"></div>
-      <div data-aos="fade-right" class="row-span-2"><img src="/../images/IMG-20230112-WA0097.jpg"></div>
-      <div data-aos="fade-up" class="row-span-2"><img src="/../images/IMG-20230112-WA0095.jpg"></div>
-      <div data-aos="fade-down" class="row-span-2"><img src="/../images/IMG-20230112-WA0096.jpg"></div>
-      <div data-aos="fade-left"><img src="/../images/IMG-20230112-WA0076.jpg" class="w-full h-full"></div>
     </div>
   </div>
 
-  <!-- Lighting partner -->
+  <!-- Famous Dishes -->
+  <div class="p-0" data-aos="fade-in">
+    <div class=" parallax md:flex items-center justify-center gap-4 h-screen bg-fixed bg-center bg-cover custom-img ">
+
+      <div class="text-center basis-1/2 text-white flex justify-center items-center">
+        <div class="md:text-right py-8" data-aos="fade-up">
+          <span class="poppinslight text-4xl text-[#c49b63]">Discover</span>
+          <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
+          <button type="button"
+            class="text-[#c49b63] hover:text-[#c49b63] border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-[#c49b63] dark:text-[#c49b63] dark:hover:text-white dark:hover:bg-[#c49b63] dark:focus:ring-yellow-900 uppercase poppins"
+            onclick="window.location.href = 'menu.html';">View
+            full menu</button>
+        </div>
+      </div>
+
+      <div class="basis-1/2 md:pr-6 px-5">
+        <div class="flex gap-6 justify-center md:justify-start">
+          <div class="flex flex-col">
+            <div class="flex justify-end">
+              <img src="/../images/dish-1.jpg" class="w-44" data-aos="fade-up">
+            </div>
+            <div class="mt-6">
+              <img src="/../images/dish-4.jpg" class="w-52" data-aos="fade-up">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="">
+              <img src="/../images/dish-3.jpg" class="w-48" data-aos="fade-up">
+            </div>
+            <div class="mt-5">
+              <img src="/../images/dish-2.jpg" class="w-48" data-aos="fade-in">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Events -->
+  <div class="py-14 bg-[#c49b63]">
+    <div>
+      <div class="text-center text-[#272727] pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#272727]">Organize</span>
+        <h2 class="poppinsbold text-5xl uppercase">your events</h2>
+        <p class="poppins text p-9">
+          We understand that finding the perfect location for your events can be a daunting task. That's why we've
+          created a special café section just for you. Whether you're planning a corporate meeting, a birthday party, or
+          a social gathering, our café is the perfect place to host your event.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row px-6 lg:px-28 gap-6" data-aos="fade-up">
+      <div class="flex self-center">
+        <img src="/../images/photo-2.jpg" alt="" data-aos="fade-up">
+      </div>
+      <div class="flex self-center">
+        <img src="/../images/photo-3.jpg" alt="" data-aos="fade-up">
+      </div>
+      <div class="flex self-center">
+        <img src="/../images/photo-4.jpg" alt="" data-aos="fade-up">
+      </div>
+    </div>
+  </div>
+
+  <!-- testimonials -->
+
   <div class="py-14">
-    <div class="pb-10">
-      <div class="flex flex-row heading text-center pb-10 justify-center">
-        <div class="pr-7">
-          <div class="line w-32 h-1/2"></div>
-          <div class="h-1/2"></div>
-        </div>
-        <h2 class="poppins text-5xl text-[#d7ab6e]">Partnerships</h2>
-        <div class="pl-7">
-          <div class="line w-32 h-1/2"></div>
-          <div class="h-1/2"></div>
-        </div>
+    <div>
+      <div class="text-center text-white pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#c49b63]">Testimonials</span>
+        <h2 class="poppinsbold text-5xl uppercase">Hear From Them</h2>
+        <p class="poppins text p-9">
+          Our customers make us. Hear from some of our customers, their opinion about the food and ambience of this place. We hope your experience on visiting this cafe of ours is just as good; for we strive to build an enjoyable experience for our customers.
+        </p>
       </div>
+    </div>
 
-    <div class="flex flex-col justify-center md:flex-row px-6 py-6 lg:px-28 gap-6 space-x-10" data-aos="fade-up">
-      <div class="flex self-center md:h-96">
-        <img src="/../images/partner-0.jpg" alt="" data-aos="fade-up" class="object-fit md:object-cover">
-      </div>
-      <div class="flex self-center md:h-96">
-        <img src="/../images/partner-1.jpg" alt="" data-aos="fade-up" class="object-fit md:object-cover">
-      </div>
-      <div class="flex self-center md:h-96">
-        <img src="/../images/partner-2.jpg" alt="" data-aos="fade-up" class="object-fit md:object-cover">
+    <div class="carousel-container">
+      <div class="inner-carousel">
+        <div class="track">
+          <div class="card-container">
+            <div class="card card1">
+              <video controls>
+                <source src="/../videos/VID-20230112-WA0074.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card2">
+              <video controls>
+                <source src="/../videos/VID-20230112-WA0078.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card3">
+              <video controls>
+                <source src="/../videos/VID-20230112-WA0079.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card4">
+              <video controls>
+                <source src="/../videos/VID-20230112-WA0080.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+        </div>
+        <div class="nav">
+          <button class="prev bg-white poppins"><i class="fas fa-arrow-left fa-2x">
+              -</i></button>
+          <button class="next bg-[#c49b63] poppins"><i class="fas fa-arrow-right fa-2x -right-96">-</i></button>
+        </div>
       </div>
     </div>
   </div>
+
 
   <!-- Contact Us -->
   <div class="pt-20 pb-20 text-[#272727] px-16 bg-[#c49b63]" id="contact_us">
@@ -196,7 +420,7 @@
         <div class="QR flex justify-center">
           <a
             href="upi://pay?mode=02&pa=Q871865527@ybl&purpose=00&mc=0000&pn=PhonePeMerchant&orgid=180001&sign=MEUCIQD+bnWUgQDPAdZUrL3RRUxDySREk+fs1WycLhFCmPxAggIgaTjr+0w0DSCp3jJ7ykiQoA6n2rbaN/FS3HNlw0Uju98="><img
-              src="/../images/qr-code.svg" class="qr-code h-60" /></a>
+              src="../images/qr-code.svg" class="qr-code h-60" /></a>
         </div>
         <div class="info my-5">
           <div class="flex items-center gap-3">
@@ -286,16 +510,33 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center p-4 bg-[#272727] shadow md:p-6">
-    <span class="text-sm text-white-700 dark:text-white">© 2023 DOSTEAn. All Rights Reserved.
+  <footer class="text-center p-4 nav-colored shadow md:p-6">
+    <span class="text-sm text-white ">© 2023 DOSTEAn. All Rights Reserved.
     </span>
   </footer>
 
+  <script src="/../js/slider.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+  <script>
+    var myNav = document.getElementById('nav');
+    window.onscroll = function () {
+      if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+      }
+      else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+      }
+    };
+  </script>
+
+  <script src="/../js/testimonial-slider.js">
+  </script>
 </body>
 
 </html>
