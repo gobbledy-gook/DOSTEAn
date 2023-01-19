@@ -44,20 +44,25 @@
     .line {
       border-bottom: solid 1px #c49b63;
     }
+
+    .nav-transparent {
+        background-color:#151515;
+      }
+
   </style>
 </head>
 
 <body bgcolor="#0f0f0f">
 
   <!-- Navbar -->
-  <nav class="bg-[#151515] border-gray-200 px-52 py-2.5 text-white fixed w-screen poppins">
+  <nav id="nav" class="nav-transparent border-gray-200 px-28 py-2.5 fixed w-full z-10 poppins">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="" class="flex items-center">
         <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DOSTEAn</span>
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">DOSTEAn</span>
       </a>
       <button data-collapse-toggle="navbar-default" type="button"
-        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 ml-14 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -72,20 +77,20 @@
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:border-gray-700">
           <li>
             <a href="home.html"
-              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
           </li>
           <li>
             <a href="menu.html"
-              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
           </li>
           <li>
             <a href="gallery.html"
-              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-[#c49b63] dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Photo
+              class="block py-2 pl-3 pr-4 rounded text-[#c49b63] hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Photo
               Gallery</a>
           </li>
           <li>
             <a href="#contact_us"
-              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Contact
               Us</a>
           </li>
         </ul>
