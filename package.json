@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Peacexoom/DOSTEAn#readme",
   "devDependencies": {
+    "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
   }
 }
