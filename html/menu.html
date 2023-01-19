@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Menu</title>
+    <title>DOSTEAn : Menu</title>
+    <link rel="shortcut icon" type="imagesx-icon" href="../images/Dostean-logo.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <script src="../script/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
     <style>
         .custom-img {
             background-image: url("../images/foodpan_menuback.jpg");
@@ -22,6 +24,10 @@
             font-family: 'Lobster', cursive;
             text-align: left;
             color: #c49b63;
+        }
+
+        .poppins {
+            font-family: 'Poppins', sans-serif;
         }
 
         .satisfy {
@@ -106,15 +112,19 @@
             position: relative;
             width: 40%;
             height: 600px;
-            background-color: #71717192;
+            background-color: #71717137;
             overflow-y: scroll;
             overflow-x: hidden;
             margin: 0px;
         }
 
         .hovermenu2::-webkit-scrollbar {
-            display: none;
-            /* Safari and Chrome */
+            width: 20px;
+        }
+
+        .hovermenu2::-webkit-scrollbar-thumb{
+            background-color: rgba(196, 155, 99, 0.7);
+            border-radius:10px;
         }
 
         .hovermenudiv {
@@ -152,18 +162,22 @@
             width: 50%;
             padding: 0px;
         }
+
+        .nav-transparent {
+            background-color: #151515;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="bg-[#1e1d1d] border-gray-200 px-52 py-2.5 dark:bg-gray-900 text-white fixed w-screen z-10">
+    <nav id="nav" class="nav-transparent border-gray-200 px-28 py-2.5 fixed w-full z-10 poppins">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="" class="flex items-center">
                 <img src="../images/Dostean-logo.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DOSTEAn</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap text-white">DOSTEAn</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 ml-14 text-sm text-gray-700 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -175,23 +189,23 @@
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                     <li>
                         <a href="home.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                            class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Home</a>
                     </li>
                     <li>
                         <a href="menu.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
+                            class="block py-2 pl-3 pr-4 rounded text-[#c49b63] hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Menu</a>
                     </li>
                     <li>
                         <a href="gallery.html"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Photo
+                            class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Photo
                             Gallery</a>
                     </li>
                     <li>
                         <a href="#contact_us"
-                            class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+                            class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white  md:dark:hover:bg-transparent">Contact
                             Us</a>
                     </li>
                 </ul>
@@ -202,6 +216,9 @@
         <div class="flex pt-8 text-2xl items-center text-slate-200 col-md-7 col-sm-12 text-center w-screen flex-row">
             <div class="flex items-center hovermenu1">
                 <div class="flex flex-col items-center poppins_light">
+                    <div class="clipart">
+                        <img src="../images/hotchocolatepng.png" width="125">
+                    </div>
                     <div class="fullwidth">
                         <div class="ourmenu">
                             <h1 class="fullwidth satisfy text-center"><b class="fullwidth">OUR MENU</b></h1>
@@ -217,7 +234,7 @@
                     <div><button class="btn2  p-5 " onclick="reveal('Others')">Others</button></div>
                 </div>
             </div>
-            <div class="hovermenu2 inline-block right-36" id="hovermenu2">
+            <div class="hovermenu2 inline-block pt-20 scrollbar-thin scrollbar-thumb-blue-500" id="hovermenu2">
                 <div class="hovermenu2inner p-0 pt-20 m-0">
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv hovermenudivdefault"
                         id="Beverages_and_Deserts">
@@ -1630,6 +1647,9 @@
         <span class="text-sm text-gray-500 dark:text-gray-400">© 2023 DOSTEAn. All Rights Reserved.
         </span>
     </footer>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 class Slider {
-    constructor({container="sliderContainer", textColor="white", ctaBackground="white", ctaColor="black", autoplay=true, autoplaySpeed=3000, navArrows = true, dots = true, marginTop= 0}) {
+    constructor({container="sliderContainer", textColor="white", ctaBackground="white", ctaColor="black", autoplay=true, autoplaySpeed=2500, navArrows = true, dots = true, marginTop= 0}) {
       this.currentSlideIndex = 0;
       this.slides = [];
       this.container = document.getElementById(container);
