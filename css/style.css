@@ -1266,6 +1266,10 @@ video {
     height: 100%;
   }
 
+  .md\:h-96 {
+    height: 24rem;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -1296,6 +1300,11 @@ video {
     background-color: transparent;
   }
 
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .md\:p-0 {
     padding: 0px;
   }
@@ -1323,11 +1332,6 @@ video {
 
   .md\:font-medium {
     font-weight: 500;
-  }
-
-  .md\:text-gray-100 {
-    --tw-text-opacity: 1;
-    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 
   .md\:hover\:bg-transparent:hover {
