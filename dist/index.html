@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOSTEAn</title>
+  <link rel="shortcut icon" type="imagesx-icon" href="/assets/Dostean-logo-92feab5f.ico" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+
+  <style>
+    nav,
+    footer {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .poppinslight {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 100;
+    }
+
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .poppinsbold {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    body {
+      overflow-x: clip;
+    }
+
+    .parallax {
+      background-image: url('../images/parallax-bg.jpg');
+      padding: 0;
+    }
+
+    .nav-colored {
+      background-color: #151515;
+
+    }
+
+    .nav-transparent {
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    }
+
+    @media (min-width: 768px) {
+      .nav-transparent {
+        background-color: transparent;
+        border-bottom: solid 0.5px #c6c6c636;
+      }
+    }
+
+    /* .nav-transparent {
+      background-color: transparent;
+      border-bottom: solid 0.5px #c6c6c636;
+    } */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .carousel-container {
+      width: 95%;
+      margin: 50px auto;
+      position: relative;
+      /* border-left-width: 4px; */
+      /* border-left-style: solid;
+  border-left-color: #aaa; */
+    }
+
+    @media (max-width: 768px) {
+      .carousel-container {
+        width: 95%;
+      }
+    }
+
+    .inner-carousel {
+      width: 95%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .track {
+      display: inline-flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card-container {
+      width: 33%;
+      height: 100%;
+      flex-shrink: 0;
+      padding-right: 40px;
+      padding-left: 40px
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 5px;
+        padding-left: 5px
+      }
+    }
+
+    @media (max-width: 920px) {
+      .card-container {
+        width: 45%;
+        height: 100%;
+        flex-shrink: 0;
+        padding-right: 10px;
+        padding-left: 10px
+      }
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+      background-position: center bottom;
+      background-size: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+    }
+
+    .nav button {
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      outline: none;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav button {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        outline: none;
+        /* border: 1px solid #000; */
+        cursor: pointer;
+      }
+
+      .nav .next {
+        right: -40px;
+      }
+
+      .nav .prev {
+        left: -20px;
+        display: none;
+      }
+
+      .nav .prev.show {
+        display: block;
+      }
+
+      .nav .next.hide {
+        display: none;
+      }
+    }
+
+    .nav .prev {
+      left: -25px;
+      display: none;
+    }
+
+    .nav .prev.show {
+      display: block;
+    }
+
+    .nav .next {
+      right: -25px;
+    }
+
+    .nav .next.hide {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/index-1e5a0e7a.css">
+</head>
+
+<body bgcolor="#0f0f0f">
+  <!-- Navbar -->
+  <nav id="nav" class="nav-transparent border-gray-200 px-10 py-2.5 fixed w-full z-10 poppins">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="" class="flex items-center">
+        <img src="/assets/Dostean-logo-8b3f9d1a.png" class="h-6 mr-3 sm:h-9" alt="Dostean Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">DOSTEAn</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-14 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto bg-[#151515] md:bg-transparent" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-[#c49b63]">Home</a>
+          </li>
+          <li>
+            <a href="/html/menu.html"
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Menu</a>
+          </li>
+          <li>
+            <a href="/html/gallery.html"
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Photo
+              Gallery</a>
+          </li>
+          <li>
+            <a href="#contact_us"
+              class="block py-2 pl-3 pr-4 rounded text-gray-400 hover:bg-gray-100 hover:text-[#151515] md:hover:text-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Contact
+              Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="poppins pt-" id="mySlider" data-aos="fade-in"></div>
+
+
+  <!-- History -->
+  <div class="md:flex md:flex-row" data-aos="fade-in">
+    <div class="justify-center items-center basis-1/2" data-aos="fade-up">
+      <img src="/assets/photo-1-60ad0a20.jpg" alt="" class="h-full object-cover">
+    </div>
+
+    <div class="bg-[#c49b63] flex justify-center items-center basis-1/2 py-16">
+      <div class="px-20">
+        <div data-aos="fade-up">
+          <span class="poppinslight text-4xl">Discover</span>
+          <h2 class="poppinsbold text-5xl">Our History</h2>
+        </div>
+        <div data-aos="fade-up">
+          <br>
+          <p class="poppins text">
+            It is surat based startup started on 15 September 2020 by 3 friends who are tea lover so they started there
+            own cafe franchise of Gujarat first eatable biscuit cup cafe. In which u drink the tea / hot chocolate and
+            the cup which in we serve is eatable ☕️. We have good ambiance successfully running business from last 2
+            year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Famous Dishes -->
+  <div class="p-0" data-aos="fade-in">
+    <div class=" parallax md:flex items-center justify-center gap-4 h-screen bg-fixed bg-center bg-cover custom-img ">
+
+      <div class="text-center basis-1/2 text-white flex justify-center items-center">
+        <div class="md:text-right py-8" data-aos="fade-up">
+          <span class="poppinslight text-4xl text-[#c49b63]">Discover</span>
+          <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
+          <button type="button"
+            class="text-[#c49b63] hover:text-[#c49b63] border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-[#c49b63] dark:text-[#c49b63] dark:hover:text-white dark:hover:bg-[#c49b63] dark:focus:ring-yellow-900 uppercase poppins"
+            onclick="window.location.href = 'menu.html';">View
+            full menu</button>
+        </div>
+      </div>
+
+      <div class="basis-1/2 md:pr-6 px-5">
+        <div class="flex gap-6 justify-center md:justify-start">
+          <div class="flex flex-col">
+            <div class="flex justify-end">
+              <img src="/assets/dish-1-f125c2b9.jpg" class="w-44" data-aos="fade-up">
+            </div>
+            <div class="mt-6">
+              <img src="/assets/dish-4-abdcd91f.jpg" class="w-52" data-aos="fade-up">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="">
+              <img src="/assets/dish-3-865743f6.jpg" class="w-48" data-aos="fade-up">
+            </div>
+            <div class="mt-5">
+              <img src="/assets/dish-2-0f43ae52.jpg" class="w-48" data-aos="fade-in">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Events -->
+  <div class="py-14 bg-[#c49b63]">
+    <div>
+      <div class="text-center text-[#272727] pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#272727]">Organize</span>
+        <h2 class="poppinsbold text-5xl uppercase">your events</h2>
+        <p class="poppins text p-9">
+          We understand that finding the perfect location for your events can be a daunting task. That's why we've
+          created a special café section just for you. Whether you're planning a corporate meeting, a birthday party, or
+          a social gathering, our café is the perfect place to host your event.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row px-6 lg:px-28 gap-6" data-aos="fade-up">
+      <div class="flex self-center">
+        <img src="/assets/photo-2-723a8893.jpg" alt="" data-aos="fade-up">
+      </div>
+      <div class="flex self-center">
+        <img src="/assets/photo-3-9b3421d9.jpg" alt="" data-aos="fade-up">
+      </div>
+      <div class="flex self-center">
+        <img src="/assets/photo-4-f444c04c.jpg" alt="" data-aos="fade-up">
+      </div>
+    </div>
+  </div>
+
+  <!-- testimonials -->
+
+  <div class="py-14">
+    <div>
+      <div class="text-center text-white pb-4" data-aos="fade-up">
+        <span class="poppinslight text-4xl text-[#c49b63]">Testimonials</span>
+        <h2 class="poppinsbold text-5xl uppercase">Hear From Them</h2>
+        <p class="poppins text p-9">
+          Our customers make us. Hear from some of our customers, their opinion about the food and ambience of this place. We hope your experience on visiting this cafe of ours is just as good; for we strive to build an enjoyable experience for our customers.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="inner-carousel">
+        <div class="track">
+          <div class="card-container">
+            <div class="card card1">
+              <video controls>
+                <source src="/assets/VID-20230112-WA0074-5c581c87.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card2">
+              <video controls>
+                <source src="/assets/VID-20230112-WA0078-bd6bb3d5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card3">
+              <video controls>
+                <source src="/assets/VID-20230112-WA0079-cc6ca5b6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card card4">
+              <video controls>
+                <source src="/assets/VID-20230112-WA0080-b81265ee.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+        </div>
+        <div class="nav">
+          <button class="prev bg-white poppins"><i class="fas fa-arrow-left fa-2x">
+              -</i></button>
+          <button class="next bg-[#c49b63] poppins"><i class="fas fa-arrow-right fa-2x -right-96">-</i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Us -->
+  <div class="pt-20 pb-20 text-[#272727] px-16 bg-[#c49b63]" id="contact_us">
+    <div class="flex flex-col md:flex-row my-4">
+      <div class="basis-1/2 mb-6 md:mb-0 px-3 lg:px-6 poppins text-[#272727] text-center md:text-left"
+        data-aos="fade-in">
+        <h2 class="mb-6 poppinsbold text-5xl">Contact us</h2>
+        <p class="mb-6">
+          If you have any further questions or if you would like to make a reservation, please don't hesitate to contact
+          us. Our friendly and professional staff will be happy to assist you.
+          Come visit us and enjoy a delicious cup of coffee and a bite to eat.We look forward to hearing from you and
+          serving you soon!
+        </p>
+        <div class="QR flex justify-center">
+          <a
+            href="upi://pay?mode=02&pa=Q871865527@ybl&purpose=00&mc=0000&pn=PhonePeMerchant&orgid=180001&sign=MEUCIQD+bnWUgQDPAdZUrL3RRUxDySREk+fs1WycLhFCmPxAggIgaTjr+0w0DSCp3jJ7ykiQoA6n2rbaN/FS3HNlw0Uju98="><img
+              src="../images/qr-code.svg" class="qr-code h-60" /></a>
+        </div>
+        <div class="info my-5">
+          <div class="flex items-center gap-3">
+            <svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 text-[#272727]">
+              <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+              <title>location_on</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Rounded" transform="translate(-377.000000, -1306.000000)">
+                  <g id="Communication" transform="translate(100.000000, 1162.000000)">
+                    <g id="-Round-/-Communication-/-location_on" transform="translate(272.000000, 142.000000)">
+                      <g>
+                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path
+                          d="M12,2 C8.13,2 5,5.13 5,9 C5,13.17 9.42,18.92 11.24,21.11 C11.64,21.59 12.37,21.59 12.77,21.11 C14.58,18.92 19,13.17 19,9 C19,5.13 15.87,2 12,2 Z M12,11.5 C10.62,11.5 9.5,10.38 9.5,9 C9.5,7.62 10.62,6.5 12,6.5 C13.38,6.5 14.5,7.62 14.5,9 C14.5,10.38 13.38,11.5 12,11.5 Z"
+                          id="🔹Icon-Color" fill="#1D1D1D"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p class="text-left">Bungalow No-2, beside Ichhanath Super Store, Jalaram Society, Piplod, Surat,Gujarat
+              395007</p>
+          </div>
+          <div class="flex items-center gap-3 mt-1">
+            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 text-[#272727]">
+              <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+              <title>phone</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Rounded" transform="translate(-749.000000, -1263.000000)">
+                  <g id="Communication" transform="translate(100.000000, 1162.000000)">
+                    <g id="-Round-/-Communication-/-phone" transform="translate(646.000000, 98.000000)">
+                      <g>
+                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path
+                          d="M19.23,15.26 L16.69,14.97 C16.08,14.9 15.48,15.11 15.05,15.54 L13.21,17.38 C10.38,15.94 8.06,13.63 6.62,10.79 L8.47,8.94 C8.9,8.51 9.11,7.91 9.04,7.3 L8.75,4.78 C8.63,3.77 7.78,3.01 6.76,3.01 L5.03,3.01 C3.9,3.01 2.96,3.95 3.03,5.08 C3.56,13.62 10.39,20.44 18.92,20.97 C20.05,21.04 20.99,20.1 20.99,18.97 L20.99,17.24 C21,16.23 20.24,15.38 19.23,15.26 Z"
+                          id="🔹Icon-Color" fill="#1D1D1D"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p class="text-left">+91 9737701159</p>
+          </div>
+          <div class="flex items-center gap-3 mt-1">
+            <a href="https://www.instagram.com/dostean_surat/">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="w-6">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM18.7233 11.2773C20.0886 11.2152 20.5249 11.2 24.0012 11.2H23.9972C27.4746 11.2 27.9092 11.2152 29.2746 11.2773C30.6373 11.3397 31.5679 11.5555 32.384 11.872C33.2266 12.1987 33.9386 12.636 34.6506 13.348C35.3627 14.0595 35.8 14.7736 36.128 15.6155C36.4427 16.4294 36.6587 17.3595 36.7227 18.7222C36.784 20.0876 36.8 20.5238 36.8 24.0001C36.8 27.4764 36.784 27.9116 36.7227 29.277C36.6587 30.6391 36.4427 31.5695 36.128 32.3837C35.8 33.2253 35.3627 33.9394 34.6506 34.6509C33.9394 35.3629 33.2264 35.8013 32.3848 36.1283C31.5703 36.4448 30.6391 36.6605 29.2765 36.7229C27.9111 36.7851 27.4762 36.8003 23.9996 36.8003C20.5236 36.8003 20.0876 36.7851 18.7222 36.7229C17.3598 36.6605 16.4294 36.4448 15.615 36.1283C14.7736 35.8013 14.0595 35.3629 13.3483 34.6509C12.6365 33.9394 12.1992 33.2253 11.872 32.3834C11.5557 31.5695 11.34 30.6394 11.2773 29.2767C11.2155 27.9114 11.2 27.4764 11.2 24.0001C11.2 20.5238 11.216 20.0873 11.2771 18.7219C11.3384 17.3598 11.5544 16.4294 11.8717 15.6152C12.1997 14.7736 12.6371 14.0595 13.3491 13.348C14.0606 12.6363 14.7747 12.1989 15.6166 11.872C16.4305 11.5555 17.3606 11.3397 18.7233 11.2773Z"
+                  fill="#262626" id="id_119"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M22.853 13.5067C23.0759 13.5064 23.3158 13.5065 23.5746 13.5066L24.0013 13.5067C27.4189 13.5067 27.824 13.519 29.1736 13.5803C30.4216 13.6374 31.0989 13.8459 31.5501 14.0211C32.1475 14.2531 32.5733 14.5305 33.0211 14.9785C33.4691 15.4265 33.7464 15.8532 33.979 16.4505C34.1542 16.9012 34.363 17.5785 34.4198 18.8265C34.4811 20.1759 34.4944 20.5812 34.4944 23.9972C34.4944 27.4133 34.4811 27.8186 34.4198 29.168C34.3627 30.416 34.1542 31.0933 33.979 31.544C33.747 32.1413 33.4691 32.5667 33.0211 33.0144C32.5731 33.4624 32.1477 33.7398 31.5501 33.9718C31.0995 34.1478 30.4216 34.3558 29.1736 34.4128C27.8242 34.4742 27.4189 34.4875 24.0013 34.4875C20.5834 34.4875 20.1783 34.4742 18.8289 34.4128C17.5809 34.3552 16.9036 34.1467 16.4521 33.9715C15.8548 33.7395 15.4281 33.4621 14.9801 33.0141C14.5321 32.5661 14.2548 32.1405 14.0222 31.5429C13.847 31.0923 13.6382 30.4149 13.5814 29.1669C13.5201 27.8176 13.5078 27.4122 13.5078 23.994C13.5078 20.5759 13.5201 20.1727 13.5814 18.8233C13.6385 17.5753 13.847 16.898 14.0222 16.4468C14.2542 15.8494 14.5321 15.4228 14.9801 14.9748C15.4281 14.5268 15.8548 14.2494 16.4521 14.0169C16.9033 13.8409 17.5809 13.6329 18.8289 13.5755C20.0097 13.5222 20.4674 13.5062 22.853 13.5035V13.5067ZM30.8339 15.6321C29.9859 15.6321 29.2978 16.3193 29.2978 17.1676C29.2978 18.0156 29.9859 18.7036 30.8339 18.7036C31.6819 18.7036 32.3699 18.0156 32.3699 17.1676C32.3699 16.3196 31.6819 15.6316 30.8339 15.6316V15.6321ZM17.4279 24.0002C17.4279 20.3701 20.3709 17.4269 24.001 17.4268C27.6312 17.4268 30.5736 20.37 30.5736 24.0002C30.5736 27.6304 27.6314 30.5723 24.0013 30.5723C20.3711 30.5723 17.4279 27.6304 17.4279 24.0002Z"
+                  fill="#242424" id="id_120"></path>
+                <path
+                  d="M24.0012 19.7334C26.3575 19.7334 28.2679 21.6436 28.2679 24.0001C28.2679 26.3564 26.3575 28.2668 24.0012 28.2668C21.6447 28.2668 19.7345 26.3564 19.7345 24.0001C19.7345 21.6436 21.6447 19.7334 24.0012 19.7334Z"
+                  fill="#262626" id="id_121"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/dostean_surat/">
+              <p class="text-left">Instagram</p>
+            </a>
+          </div>
+          <div class="flex items-center gap-3 mt-1">
+            <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"
+              class="w-6">
+              <path d="M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M23,17h-7c-0.6,0-1-0.4-1-1V7c0-0.6,0.4-1,1-1s1,0.4,1,1v8
+                h6c0.6,0,1,0.4,1,1S23.6,17,23,17z" id="id_102" style="fill: rgb(38, 38, 38);"></path>
+            </svg>
+            <p class="text-left">Timing- 12:00 PM To 11:30PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex basis-1/2" data-aos="fade-in">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7980.8973284630165!2d72.77414039654582!3d21.161379637558866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04da5cd96a645%3A0x570d0a5bf2f181a2!2sDostean%20Cafe%20%26%20restro!5e0!3m2!1sen!2sin!4v1673767630413!5m2!1sen!2sin"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          class="h-[500px] md:h-full w-full"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 nav-colored shadow md:p-6">
+    <span class="text-sm text-white ">© 2023 DOSTEAn. All Rights Reserved.
+    </span>
+  </footer>
+
+  <script src="/js/slider.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+  <script>
+    var myNav = document.getElementById('nav');
+    window.onscroll = function () {
+      if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+      }
+      else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+      }
+    };
+  </script>
+
+  <script src="/js/testimonial-slider.js">
+  </script>
+</body>
+
+</html>

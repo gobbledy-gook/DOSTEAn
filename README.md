@@ -6,7 +6,7 @@
 - Priyanshu Parikh
 ##
 ## DOSTEAn
-A website for DOSTEAn
+A website for DOSTEAn. To visit the website - [DOSTEAn](https://dostean.netlify.app)
 
 For the quick start, you can follow the steps below:
 
