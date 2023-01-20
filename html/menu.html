@@ -16,6 +16,15 @@
     <script src="../js/script.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
     <style>
+
+        html,body
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden; 
+        }
         .custom-img {
             background-image: url("../images/foodpan_menuback.jpg");
         }
@@ -226,6 +235,10 @@
             .btn2{
                 width:300px;
             }
+
+            #BandD{
+                margin-bottom:20px;
+            }
          }
 
          @media screen and (max-width: 500px){
@@ -243,6 +256,13 @@
          @media screen and (max-width: 400px){
             .hovermenu2{
                 height:380px;
+            }
+
+            #BandD{
+                width:210px;
+                padding-left:25px;
+                margin-bottom:0px;
+                height:100px;
             }
          }
 
@@ -265,12 +285,52 @@
          @media screen and (max-height: 700px){
             .hovermenu2{
                 height:190px;
-                margin-top:15px;
+                margin-top:380px;
                 width:400px;
+            }
+            header{
+                
+            }
+
+            .hovermenu1{
+                position:absolute;
+                top:50px;
+            }
+            
+            body{
+                background-color:black;
             }
          }
 
-         @media screen and (min-height: 700px) and (min-width:1180px){
+         @media screen and (max-height: 650px){
+            .hovermenu2{
+                height:190px;
+                margin-top:380px;
+                width:400px;
+                position:relative;
+                top:20px;
+            }
+            header{
+                margin-bottom:300px;
+            }
+
+            .hovermenu1{
+                position:absolute;
+                top:0px;
+                
+            }
+            body{
+                background-color:black;
+            }
+
+            .div_rowtocol{
+                position:relative;
+                
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+            }
+         }
+
+         @media screen and (min-height: 650px) and (min-width:1170px){
             .hovermenu2{
                 height:600px;
                 margin-top:15px;
@@ -278,7 +338,11 @@
             }
          }
 
-
+         @media screen and (max-width: 1000px){
+            .price{
+                padding-left:100px;
+            }
+         }
 
     </style>
 </head>
@@ -327,7 +391,7 @@
         </div>
     </nav>
     <header class="flex h-screen bg-center bg-cover custom-img pt-10 relative">
-        <div class="flex pt-8 text-2xl items-center text-slate-200 col-md-7 col-sm-12 text-center w-screen div_rowtocol">
+        <div class="flex pt-8 text-2xl items-center text-slate-200 col-md-7 col-sm-12 text-center w-screen div_rowtocol ">
             <div class="flex items-center flex-col hovermenu1">
                 <div class="flex flex-col items-center poppins_light">
                     <div class="clipart">
@@ -353,7 +417,7 @@
                     </div>
                 </div>
             </div>
-            <div class="min-[1000px]:w-[600px] min[1680px]:left-[26%] hovermenu2 inline-block pt-20" id="hovermenu2">
+            <div class="min-[1000px]:w-[600px] hovermenu2 inline-block pt-20" id="hovermenu2">
                 <div class="hovermenu2inner p-0 pt-20 m-0">
                     <div class="text-white pt-16 mx-10 display_div hovermenudiv hovermenudivdefault"
                         id="Beverages_and_Deserts">
@@ -362,7 +426,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Mojito</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">All time favorite refreshing drink</p>
                             </div>
@@ -371,7 +435,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Watermelon Mojito</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Refreshment and tummy cooler comes together</p>
                             </div>
@@ -380,7 +444,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Orange Mojito</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Tangy flavor of orange along with mint</p>
                             </div>
@@ -389,7 +453,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Berry Lemonade</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">159.00</span>
+                            <span class="price text-2xl poppins_light">159.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Cranberry flavor and lemeonade combo</p>
                             </div>
@@ -398,7 +462,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Orange</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">159.00</span>
+                            <span class="price text-2xl poppins_light">159.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Need spicy touch lets try it</p>
                             </div>
@@ -407,7 +471,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Beer Mocktail</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">209.00</span>
+                            <span class="price text-2xl poppins_light">209.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Non alcoholic drink beer flavoured</p>
                             </div>
@@ -416,7 +480,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Kala Khatta</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Original kala Khayya with the twist of mocktail</p>
                             </div>
@@ -425,7 +489,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Lemonade</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">refreshing lemondade</p>
                             </div>
@@ -434,7 +498,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Kaccha Aam</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Raw mango flavor on cool mocktail</p>
                             </div>
@@ -443,7 +507,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Imli</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Bachpan ki yaado ke saath</p>
                             </div>
@@ -453,62 +517,62 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Nutella Shake</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Oreo Shake</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">219.00</span>
+                            <span class="price text-2xl poppins_light">219.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>KitKat Shake</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">239.00</span>
+                            <span class="price text-2xl poppins_light">239.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chocolate Shake</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">219.00</span>
+                            <span class="price text-2xl poppins_light">219.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Rose Faluda</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl">199.00</span>
+                            <span class="price text-2xl">199.00</span>
                         </div>
                         <h1 class="px-8 around text-5xl justify-center lobster">Hot Coffee</h1>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Black Coffee</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">35.00</span>
+                            <span class="price text-2xl poppins_light">35.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Milk Coffee</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">36.00</span>
+                            <span class="price text-2xl poppins_light">36.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chocolate Coffee</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">65.00</span>
+                            <span class="price text-2xl poppins_light">65.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hot Chocolate with Biscuit Cup</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">60.00</span>
+                            <span class="price text-2xl poppins_light">60.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Hot Chocolate</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">70.00</span>
+                            <span class="price text-2xl poppins_light">70.00</span>
                         </div>
                         <h1 class="px-8 around text-5xl justify-center lobster">Tea</h1>
                         <div class="flex flex-row">
@@ -521,8 +585,8 @@
                                 <h2 class="text-2xl"><span>Make Your Own tea</span></h2>
                             </div>
                             <div>
-                                <div class="price px-5 text-2xl p-0 inline-block poppins_light">30.00</div>
-                                <div class="price px-5 text-2xl p-0 inline-block poppins_light">45.00</div>
+                                <div class="pricetext-2xl p-0 inline-block poppins_light">30.00</div>
+                                <div class="pricetext-2xl p-0 inline-block poppins_light">45.00</div>
                             </div>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">(Ginger, Pudina, Elaichi)</p>
@@ -533,8 +597,8 @@
                                 <h2 class="text-2xl"><span>Sukun Wali Chai</span></h2>
                             </div>
                             <div>
-                                <div class="price px-5 text-2xl p-0 inline-block poppins_light">30.00</div>
-                                <div class="price px-5 text-2xl p-0 inline-block poppins_light">45.00</div>
+                                <div class="pricetext-2xl p-0 inline-block poppins_light">30.00</div>
+                                <div class="pricetext-2xl p-0 inline-block poppins_light">45.00</div>
                             </div>
                             <div class="d-block col-span-2 teko">
 
@@ -545,8 +609,8 @@
                                 <h2 class="text-2xl"><span>Chocolate Chai</span></h2>
                             </div>
                             <div>
-                                <div class="price px-5 text-2xl p-0 inline-block w-24"></div>
-                                <div class="price px-5 text-2xl p-0 inline-block poppins_light">50.00</div>
+                                <div class="pricetext-2xl p-0 inline-block w-24"></div>
+                                <div class="pricetext-2xl p-0 inline-block poppins_light">50.00</div>
                             </div>
                             <div class="d-block col-span-2 teko">
 
@@ -557,8 +621,8 @@
                                 <h2 class="text-2xl"><span>Green Tea</span></h2>
                             </div>
                             <div>
-                                <div class="price px-5 text-2xl p-0 inline-block w-24"></div>
-                                <div class="price text-2xl p-0 inline-block poppins_light">65.00</div>
+                                <div class="pricetext-2xl p-0 inline-block w-24"></div>
+                                <div class="pri2xl p-0 inline-block poppins_light">65.00</div>
                             </div>
                             <div class="d-block col-span-2 teko">
 
@@ -569,44 +633,44 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cold Drink</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">38.00</span>
+                            <span class="price text-2xl poppins_light">38.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lemon Ice Tea</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">129.00</span>
+                            <span class="price text-2xl poppins_light">129.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peach Ice Tea</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">138.00</span>
+                            <span class="price text-2xl poppins_light">138.00</span>
                         </div>
                         <h1 class="px-8 around text-5xl justify-center lobster">Dessert</h1>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mud Brownie</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sizzling Brownie</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pan Cake</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">139.00</span>
+                            <span class="price text-2xl poppins_light">139.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sizzling Chocolate</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">119.00</span>
+                            <span class="price text-2xl poppins_light">119.00</span>
                         </div>
                     </div>
 
@@ -616,7 +680,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Manchow</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Flavored classic chinese soup</p>
                             </div>
@@ -625,7 +689,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hot N Sour</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Spiciness of chilly and tangy taste citric</p>
                             </div>
@@ -634,7 +698,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lemon Coriander</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Refreshing flavor with bite of coriander and garlic</p>
                             </div>
@@ -643,7 +707,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic Soup</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mid spicy soup accomplished flavor of burnt garlic</p>
                             </div>
@@ -653,7 +717,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Veg</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">69.00</span>
+                            <span class="price text-2xl poppins_light">69.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Freshly cut veggies sandwich like Mumbai</p>
                             </div>
@@ -662,7 +726,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Cheese</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">89.00</span>
+                            <span class="price text-2xl poppins_light">89.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Freshly cut veggies sandwich like Mumbai topped with cheese</p>
                             </div>
@@ -671,7 +735,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Grill</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Masala cheese grill sandwich flavored spicy and chatpata</p>
                             </div>
@@ -680,7 +744,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Bread Butter-Jam,Chatni</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">48.00</span>
+                            <span class="price text-2xl poppins_light">48.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Craving cutter with choice of flavors</p>
                             </div>
@@ -689,7 +753,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Toast</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">149.00</span>
+                            <span class="price text-2xl poppins_light">149.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Chopped vegetables coated with spicy marinating and load with
                                     cheese</p>
@@ -699,7 +763,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Toast</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">159.00</span>
+                            <span class="price text-2xl poppins_light">159.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">special in house sauce coated with small cut paneer and vegies
                                 </p>
@@ -709,7 +773,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Dostea Special Toast sandwich</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">179.00</span>
+                            <span class="price text-2xl poppins_light">179.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Melted cheese with sautéed vegies stuff between crunchy breads
                                 </p>
@@ -720,7 +784,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>paneer makhni garlic</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Makhni flavor cottage cheese topped on garlic bread</p>
                             </div>
@@ -729,7 +793,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Crostini - Two Flavors</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Two flavor bread topped with cheese</p>
                             </div>
@@ -738,7 +802,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Spicy Garlic Bread</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">169.00</span>
+                            <span class="price text-2xl poppins_light">169.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Bread topped with in house special sprinklers</p>
                             </div>
@@ -747,7 +811,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheese Garlic Bread</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">149.00</span>
+                            <span class="price text-2xl poppins_light">149.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic Cheese Bread</p>
                             </div>
@@ -756,7 +820,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>OTC Garlic Bread</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">179.00</span>
+                            <span class="price text-2xl poppins_light">179.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Garlic bread topped with vegetables</p>
                             </div>
@@ -765,7 +829,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pulled Cheese Garlic Bread</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">209.00</span>
+                            <span class="price text-2xl poppins_light">209.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">House special garlic bread</p>
                             </div>
@@ -775,7 +839,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Plain-chatpata peri peri</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">129.00</span>
+                            <span class="price text-2xl poppins_light">129.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Fries with the choice of flavor</p>
                             </div>
@@ -784,7 +848,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheesy</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">149.00</span>
+                            <span class="price text-2xl poppins_light">149.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Cheese loaded fries</p>
                             </div>
@@ -793,7 +857,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Garlic Fries</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">138.00</span>
+                            <span class="price text-2xl poppins_light">138.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Fries toasted with garlic and chilly</p>
                             </div>
@@ -803,32 +867,32 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Roasted Papad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl">19.00</span>
+                            <span class="price text-2xl">19.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Fried Papad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl">36.00</span>
+                            <span class="price text-2xl">36.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Papad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl">48.00</span>
+                            <span class="price text-2xl">48.00</span>
                         </div>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Green Salad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl">119.00</span>
+                            <span class="price text-2xl">119.00</span>
                         </div>
                         <h1 class="px-8 around text-5xl justify-center lobster">Salad</h1>
                         <div class="px-8 around grid my-1 py-3 grid-cols-2">
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Greek Farmer Salad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Freshly cut veggies coated with in-house flavour oil topped
                                     with cheese and olives</p>
@@ -838,7 +902,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Classic Cesar Salad</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Herb crotons and ice burg coated with Cesar sauce topped with
                                     Parmesan cheese</p>
@@ -848,7 +912,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sautéed Cottage Cheese</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">High protien salad best for healthy eaters</p>
                             </div>
@@ -857,7 +921,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Sautéed Mushroom</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Sautéed mushrooms and veggies along with aromatic herbs</p>
                             </div>
@@ -870,7 +934,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Chilly Beans</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Soup load with mexican flavor nd bite of nachos</p>
                             </div>
@@ -879,7 +943,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cream of Tomato</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mid taste classic creamy tomato soup</p>
                             </div>
@@ -888,7 +952,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Corn Cheese Ball</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mid taste classic creamy tomato soup</p>
                             </div>
@@ -897,7 +961,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Croquettes</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">209.00</span>
+                            <span class="price text-2xl poppins_light">209.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Roasted corn stuff with cheese and spice</p>
                             </div>
@@ -906,7 +970,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Aranchini Balls</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Deep fried balls stuff with exotic vegetables and cheese</p>
                             </div>
@@ -915,7 +979,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Baffalo Cottage Cheese</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">279.00</span>
+                            <span class="price text-2xl poppins_light">279.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Deep fried paneer toasted in famous baffalo sauce</p>
                             </div>
@@ -924,7 +988,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Satay</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">279.00</span>
+                            <span class="price text-2xl poppins_light">279.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Pan toasted paneer and vegetables serve with house sauce</p>
                             </div>
@@ -933,7 +997,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Khichiya</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Khichiya papad with fusion of Indian and Continental</p>
                             </div>
@@ -942,7 +1006,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Masala Kurkuri bites</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">159.00</span>
+                            <span class="price text-2xl poppins_light">159.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Nachos served with fusion style of Indian and Mexican style
                                     along with cheese sauce</p>
@@ -952,7 +1016,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Beans Nachos</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Nachos served with Mexican stuffing and sour cream</p>
                             </div>
@@ -961,7 +1025,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cheese Nachos</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">239.00</span>
+                            <span class="price text-2xl poppins_light">239.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Nachos stuff with two type of cheese sauce</p>
                             </div>
@@ -970,7 +1034,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cottage cheese taxo nachos</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Nachos served with Cottage cheese guacamole</p>
                             </div>
@@ -979,7 +1043,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Quesadilla</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">219.00</span>
+                            <span class="price text-2xl poppins_light">219.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Crunchy tortilla stuff with fresh vegies Mexican marinating and
                                     cheese</p>
@@ -990,7 +1054,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Burrito Bowl</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mexican rice served with curry n salsa</p>
                             </div>
@@ -999,7 +1063,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Cilantro Rice with Garlic Sauce</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Flavored cilantro rice served with cheese burnt garlic sauce
                                 </p>
@@ -1009,7 +1073,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Herb Rice with cheese sauce</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Different flavor herbs served with cheese sauce</p>
                             </div>
@@ -1022,7 +1086,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Manchurian</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">169.00</span>
+                            <span class="price text-2xl poppins_light">169.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Vegetable balls toasted in classic sauce</p>
                             </div>
@@ -1031,7 +1095,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Green Manchurian</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Vegetable balls toasted with chinese spinach sauce</p>
                             </div>
@@ -1040,7 +1104,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chilly</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">229.00</span>
+                            <span class="price text-2xl poppins_light">229.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Coated fried paneer toasted in classy chilly sauce</p>
                             </div>
@@ -1049,7 +1113,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>BBQ Paneer</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">229.00</span>
+                            <span class="price text-2xl poppins_light">229.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Smoky flavor oriental style paneer</p>
                             </div>
@@ -1058,7 +1122,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Crispy</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">209.00</span>
+                            <span class="price text-2xl poppins_light">209.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Crunchy vegetables toasted with mid spicy sauce</p>
                             </div>
@@ -1068,7 +1132,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Fried Rice</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic aromatic Chinese rice</p>
                             </div>
@@ -1077,7 +1141,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Schezwan Rice</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Oriental spicy rice with vegetables</p>
                             </div>
@@ -1086,7 +1150,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">229.00</span>
+                            <span class="price text-2xl poppins_light">229.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Aroma and taste of burnt garlic in oriental rice</p>
                             </div>
@@ -1095,7 +1159,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Triple Rice</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">279.00</span>
+                            <span class="price text-2xl poppins_light">279.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Three types of rice along with veg exotic gravy</p>
                             </div>
@@ -1105,7 +1169,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hakka Noodles</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">169.00</span>
+                            <span class="price text-2xl poppins_light">169.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic aromatic chinese noodles</p>
                             </div>
@@ -1114,7 +1178,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Burnt Garlic Noodles</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Noodles toasted vegetables with burnt garlic</p>
                             </div>
@@ -1123,7 +1187,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Schezwan Noodles</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">179.00</span>
+                            <span class="price text-2xl poppins_light">179.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Spicy aromatic noodles</p>
                             </div>
@@ -1133,7 +1197,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Gravy Manchurian</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Vegetable balls served with classic manchurian gravy</p>
                             </div>
@@ -1142,7 +1206,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Exotic Veg in Garlic Sauce</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">239.00</span>
+                            <span class="price text-2xl poppins_light">239.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Roasted Veg served with Garlic sauce gravy</p>
                             </div>
@@ -1151,7 +1215,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chilly Gravy</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Coated Fried Paneer floated in rich gravy</p>
                             </div>
@@ -1164,7 +1228,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Margarita</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic cheese Pizza topped with Tomato and basil</p>
                             </div>
@@ -1173,7 +1237,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pepper Pizza</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">269.00</span>
+                            <span class="price text-2xl poppins_light">269.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">5 types of peppers on pizza</p>
                             </div>
@@ -1182,7 +1246,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Garden Fresh</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">269.00</span>
+                            <span class="price text-2xl poppins_light">269.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Load with full exotic vegetables</p>
                             </div>
@@ -1191,7 +1255,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Paneer Pizza</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">319.00</span>
+                            <span class="price text-2xl poppins_light">319.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Need spicy pizza this is the best choice for you</p>
                             </div>
@@ -1200,7 +1264,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Tikka Pizza</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">319.00</span>
+                            <span class="price text-2xl poppins_light">319.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Paneer on top along with Indian spices flavor</p>
                             </div>
@@ -1209,7 +1273,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hawaiian Pizza</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">269.00</span>
+                            <span class="price text-2xl poppins_light">269.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Jalapeno Pineapple topped on pizza</p>
                             </div>
@@ -1218,7 +1282,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">319.00</span>
+                            <span class="price text-2xl poppins_light">319.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Fusion of Italian n Mexican taste together</p>
                             </div>
@@ -1228,7 +1292,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Creamy Cheese</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic bechamel cheese sauce pasta with exotic vegies</p>
                             </div>
@@ -1237,7 +1301,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pica to Redasto</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Combination of two sauce with mid spicy n cheese flavor</p>
                             </div>
@@ -1246,7 +1310,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tomatino Basil</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">classic arrabiata sauce flavored with basil</p>
                             </div>
@@ -1256,7 +1320,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Corn Spinach Lasagna</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">269.00</span>
+                            <span class="price text-2xl poppins_light">269.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Roasted corn and spinach baked with lots of cheese</p>
                             </div>
@@ -1265,7 +1329,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Makhni Lasagna</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">289.00</span>
+                            <span class="price text-2xl poppins_light">289.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mexican authentic backed dish</p>
                             </div>
@@ -1274,7 +1338,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Enchiladas</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">239.00</span>
+                            <span class="price text-2xl poppins_light">239.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mexican authentic backed dish</p>
                             </div>
@@ -1287,7 +1351,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Butter Masala</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">249.00</span>
+                            <span class="price text-2xl poppins_light">249.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Rich Makhni gravy with mild taste</p>
                             </div>
@@ -1296,7 +1360,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Chatpata</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Spicy and tangy cottage cheese serve with vegetables</p>
                             </div>
@@ -1305,7 +1369,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Angara</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">269.00</span>
+                            <span class="price text-2xl poppins_light">269.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Spicy paneer with Julian vegetables</p>
                             </div>
@@ -1314,7 +1378,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mix Veg</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Onion gravy with bunch of veggies</p>
                             </div>
@@ -1323,7 +1387,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Khima</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">219.00</span>
+                            <span class="price text-2xl poppins_light">219.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mid spicy makhni gravy with fine chopped vegetables</p>
                             </div>
@@ -1332,7 +1396,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Lahsooni Kofta</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">259.00</span>
+                            <span class="price text-2xl poppins_light">259.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Rich brown gravy with flavour of burnt garlic</p>
                             </div>
@@ -1341,7 +1405,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Jeera Aloo</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">189.00</span>
+                            <span class="price text-2xl poppins_light">189.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Boiled aloo with cumin and chilly tadka</p>
                             </div>
@@ -1350,7 +1414,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Dal Tadka</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Dal topped with red paprika and butter</p>
                             </div>
@@ -1360,7 +1424,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Jeera rice</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">99.00</span>
+                            <span class="price text-2xl poppins_light">99.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Hot aromatic rice with cumin tadka</p>
                             </div>
@@ -1369,7 +1433,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Pulao</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">149.00</span>
+                            <span class="price text-2xl poppins_light">149.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mix veg pulao with aromatic flavour</p>
                             </div>
@@ -1378,7 +1442,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Biryani</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Desi aromatic rice with veg gravy combination</p>
                             </div>
@@ -1387,7 +1451,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg raita</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">48.00</span>
+                            <span class="price text-2xl poppins_light">48.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Chopped vegetables and aromatic spice</p>
                             </div>
@@ -1397,7 +1461,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Malabar Paratha</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">29.00</span>
+                            <span class="price text-2xl poppins_light">29.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">South Indian style paratha</p>
                             </div>
@@ -1406,7 +1470,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tava Roti</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">29.00</span>
+                            <span class="price text-2xl poppins_light">29.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Desi tava roti home style</p>
                             </div>
@@ -1415,7 +1479,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mix Veg Paratha</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">50.00</span>
+                            <span class="price text-2xl poppins_light">50.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Chopped veg stuffed paratha</p>
                             </div>
@@ -1424,7 +1488,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Paneer Paratha</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">60.00</span>
+                            <span class="price text-2xl poppins_light">60.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Grated paneer and veggies stuffed paratha</p>
                             </div>
@@ -1434,7 +1498,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Samosa</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">50</span>
+                            <span class="price text-2xl poppins_light">50</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Rich flavour of Punjabi cuisine served with flavoured dips</p>
                             </div>
@@ -1447,7 +1511,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Healthy Veg wrap</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">179.00</span>
+                            <span class="price text-2xl poppins_light">179.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Best wrap for the diet person lots of Vegetables and less of
                                     carb</p>
@@ -1457,7 +1521,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Burrito Wrap</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Wrap stuff with Mexican rice and cheese topped with vegetables
                                 </p>
@@ -1467,7 +1531,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tandoori Paneer Shawarma Wrap</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">199.00</span>
+                            <span class="price text-2xl poppins_light">199.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Shawarma with the twist taste along with Indian Spice</p>
                             </div>
@@ -1476,7 +1540,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mushroom wrap</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">179.00</span>
+                            <span class="price text-2xl poppins_light">179.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Sautéed mushroom stuff along with toasted vegies and cheese</p>
                             </div>
@@ -1485,7 +1549,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel Wrap</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">219.00</span>
+                            <span class="price text-2xl poppins_light">219.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic wrap stuff with Falafel and hummus</p>
                             </div>
@@ -1494,7 +1558,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel Pocket</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">239.00</span>
+                            <span class="price text-2xl poppins_light">239.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Fresh cut vegies stuff in pita pocket along with hummus and
                                     sour cream</p>
@@ -1505,7 +1569,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Hummus Platter</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">319.00</span>
+                            <span class="price text-2xl poppins_light">319.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic Lebne Platter served with different type of hummus and
                                     accomplishments</p>
@@ -1515,7 +1579,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Falafel platter</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">339.00</span>
+                            <span class="price text-2xl poppins_light">339.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Platter served with falafel hummus and accomplishment</p>
                             </div>
@@ -1525,7 +1589,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Plain Maska Bun</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">29.00</span>
+                            <span class="price text-2xl poppins_light">29.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Best combination with tea</p>
                             </div>
@@ -1534,7 +1598,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Masala Maska bun</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">48.00</span>
+                            <span class="price text-2xl poppins_light">48.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Bun servers with lots of butter and Indian species</p>
                             </div>
@@ -1543,7 +1607,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Peri Peri Maska bun</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">48.00</span>
+                            <span class="price text-2xl poppins_light">48.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Sweetness of bun along with in house special spice</p>
                             </div>
@@ -1552,7 +1616,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Tandoori Maska Bun</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">48.00</span>
+                            <span class="price text-2xl poppins_light">48.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Indian taste lover</p>
                             </div>
@@ -1562,7 +1626,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Veg Masala</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">69.00</span>
+                            <span class="price text-2xl poppins_light">69.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Classic maggie with veggies and spice</p>
                             </div>
@@ -1571,7 +1635,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Double Masala</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">69.00</span>
+                            <span class="price text-2xl poppins_light">69.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Maggie with double masala flavour and veggies</p>
                             </div>
@@ -1580,7 +1644,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Exotic Maggie</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">89.00</span>
+                            <span class="price text-2xl poppins_light">89.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Chopped exotic veggies and spices</p>
                             </div>
@@ -1589,7 +1653,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Chilly Garlic Maggie</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">89.00</span>
+                            <span class="price text-2xl poppins_light">89.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Spicy flavour maggie</p>
                             </div>
@@ -1598,7 +1662,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>BBQ Maggie</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">89.00</span>
+                            <span class="price text-2xl poppins_light">89.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Maggie with veggies and barbecue flavour</p>
                             </div>
@@ -1608,7 +1672,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Mexican Sizzler</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">499.00</span>
+                            <span class="price text-2xl poppins_light">499.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Mexican rice served with curry, patty, Sautéed veg and fries
                                 </p>
@@ -1618,7 +1682,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Herb Sizzler</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">519.00</span>
+                            <span class="price text-2xl poppins_light">519.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Aromatic flavour herbs served with cheese sauce, Sautéed veg
                                     and fries</p>
@@ -1628,7 +1692,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Oriental Sizzler</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">449.00</span>
+                            <span class="price text-2xl poppins_light">449.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Oriental style sizzler serve rice, cottage cheese gravy,
                                     Sautéedveg and fries</p>
@@ -1638,7 +1702,7 @@
                             <div class="text align-items-center w-40 satisfy">
                                 <h2 class="text-2xl"><span>Pasta in Pasta</span></h2>
                             </div>
-                            <span class="price px-40 text-2xl poppins_light">539.00</span>
+                            <span class="price text-2xl poppins_light">539.00</span>
                             <div class="d-block col-span-2 teko">
                                 <p class="poppins_light">Two flavoured pasta in one plate along with garlic bread,
                                     Sautéed veg and fries</p>
