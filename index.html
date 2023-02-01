@@ -16,6 +16,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
 
   <style>
+    html,body
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden; 
+        }
+
     nav,
     footer {
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -203,6 +212,95 @@
     .nav .next.hide {
       display: none;
     }
+
+    .expandonclick{
+      padding:0px;
+      display:inline-block;
+      position:fixed;
+      background-color:#c49b63;
+      bottom:20px;
+      right:20px;
+      height:100px;
+      width:100px;
+      border-radius:50px;
+      overflow:hidden;
+      z-index:20;
+      transition:all 1s;
+    }
+
+    .expand {
+      padding:0px;
+      display:inline-block;
+      position:fixed;
+      background-color: rgba(0, 255, 255, 0);
+      bottom:20px;
+      right:20px;
+      height:345px;
+      width:100px;
+      border-radius:50px;
+      overflow:hidden;
+      z-index:20;
+      transition:all 1s;
+    }
+
+    .expandonclick button{
+      margin:0px;
+      background-color: rgba(0, 0, 0, 0);
+      display:inline-block;
+      height:100px;
+      width:100px;
+      border-radius:50%;
+      z-index:20;
+    }
+
+    .expandonclick .order_now_button{
+      position:absolute;
+      background-color:#c49b63;
+      margin-bottom:0px;
+      bottom:0px;
+    }
+
+    .expandonclick img{
+      margin-left:auto;
+      margin-right:auto;
+      height:75px;
+    }
+
+    .marginbottom{
+      margin-bottom:15px;
+    }
+
+    @media (max-width: 768px) {
+      .expandonclick{
+        height:50px;
+        width:50px;
+        border-radius:25px;
+        bottom:28px;
+        right:28px;
+      }
+
+      .expand{
+        width:50px;
+        height:180px;
+        border-radius:25px;
+      }
+
+      .expandonclick button{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+      }
+
+      .expandonclick img{
+        height:37px;
+      }
+
+      .marginbottom{
+        margin-bottom:10px;
+      }
+      }
+
+
   </style>
 </head>
 
@@ -251,6 +349,11 @@
     </div>
   </nav>
 
+  <div class = "expandonclick" id="expandonclick">
+      <button class ="orderbutton order_now_button" id="order_now_button"><img src="images/delivery-man.png"></button>
+      <button class = "orderbutton swiggy"><a target="_blank" href="https://www.swiggy.com/restaurants/dostea-cafe-and-restaurant-piplod-surat-599246"><img src="images/swiggy.png"></a></button>
+      <button class = "orderbutton zomato"><a target="_blank" href="https://www.zomato.com/surat/dostea-cafe-and-restro-piplod"><img src="images/zomato.png"></a></button>
+  </div>
 
   <div class="poppins pt-" id="mySlider" data-aos="fade-in"></div>
 
@@ -514,6 +617,8 @@
     <span class="text-sm text-white ">© 2023 DOSTEAn. All Rights Reserved.
     </span>
   </footer>
+
+  <script src="/js/ordernow.js"></script>
 
   <script src="/js/slider.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

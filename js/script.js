@@ -10,3 +10,4 @@ function reveal(param){
     buffer = param;
     i=i+1;
 }
+
