@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
 
+  <script src='js/jquery-3.6.1.min.js'></script>
+
   <style>
     nav,
     footer {
@@ -203,6 +205,62 @@
     .nav .next.hide {
       display: none;
     }
+
+    .contact_us_top {
+      margin-bottom: 4rem;
+    }
+
+    .inquiry {
+      border-top: solid 0.5px #0f0f0f9e;
+      background-color: #c49b63;
+      padding-top: 2rem;
+    }
+
+    @media(min-width:768px) {
+      .field {
+        margin-left: 6rem;
+        margin-right: 6rem;
+      }
+
+      .inquiry-div{
+        display:flex;
+        flex-direction: row;
+      }
+
+      .inquiry-div1{
+        width:50%;
+        padding-right:5%;
+      }
+
+      .inquiry-div2{
+        width:50%;
+        border-left: solid 0.5px #0f0f0f9e; 
+      }
+    }
+
+    @media(max-width: 768px){
+      .reserve {
+      border-top: solid 0.5px #0f0f0f9e;
+      background-color: #c49b63;
+      padding-top: 2rem;
+    }
+    }
+
+    .field {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .Send_button {
+      background-color: #0f0f0f;
+      transition-duration: 0.3s;
+    }
+
+    .Send_button:hover {
+      background-color: #c49b63;
+      border: solid 1px #0f0f0f;
+      color: #0f0f0f;
+    }
   </style>
 </head>
 
@@ -289,7 +347,7 @@
           <span class="poppinslight text-4xl text-[#c49b63]">Discover</span>
           <h2 class="poppinsbold text-5xl">Our Famous Dishes</h2>
           <button type="button"
-            class="text-[#c49b63] hover:text-[#c49b63] border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 dark:border-[#c49b63] dark:text-[#c49b63] dark:hover:text-white dark:hover:bg-[#c49b63] dark:focus:ring-yellow-900 uppercase poppins"
+            class="text-[#c49b63] hover:text-white border-2 border-[#c49b63] hover:bg-[#c49b63] focus:outline-none font-medium text-sm px-5 py-3.5 text-center mt-6 uppercase poppins"
             onclick="window.location.href = 'menu.html';">View
             full menu</button>
         </div>
@@ -353,7 +411,9 @@
         <span class="poppinslight text-4xl text-[#c49b63]">Testimonials</span>
         <h2 class="poppinsbold text-5xl uppercase">Hear From Them</h2>
         <p class="poppins text p-9">
-          Our customers make us. Hear from some of our customers, their opinion about the food and ambience of this place. We hope your experience on visiting this cafe of ours is just as good; for we strive to build an enjoyable experience for our customers.
+          Our customers make us. Hear from some of our customers, their opinion about the food and ambience of this
+          place. We hope your experience on visiting this cafe of ours is just as good; for we strive to build an
+          enjoyable experience for our customers.
         </p>
       </div>
     </div>
@@ -407,7 +467,7 @@
 
   <!-- Contact Us -->
   <div class="pt-20 pb-20 text-[#272727] px-16 bg-[#c49b63]" id="contact_us">
-    <div class="flex flex-col md:flex-row my-4">
+    <div class="contact_us_top flex flex-col md:flex-row mt-4">
       <div class="basis-1/2 mb-6 md:mb-0 px-3 lg:px-6 poppins text-[#272727] text-center md:text-left"
         data-aos="fade-in">
         <h2 class="mb-6 poppinsbold text-5xl">Contact us</h2>
@@ -417,11 +477,11 @@
           Come visit us and enjoy a delicious cup of coffee and a bite to eat.We look forward to hearing from you and
           serving you soon!
         </p>
-        <div class="QR flex justify-center">
+        <!-- <div class="QR flex justify-center">
           <a
             href="upi://pay?mode=02&pa=Q871865527@ybl&purpose=00&mc=0000&pn=PhonePeMerchant&orgid=180001&sign=MEUCIQD+bnWUgQDPAdZUrL3RRUxDySREk+fs1WycLhFCmPxAggIgaTjr+0w0DSCp3jJ7ykiQoA6n2rbaN/FS3HNlw0Uju98="><img
               src="../images/qr-code.svg" class="qr-code h-60" /></a>
-        </div>
+        </div> -->
         <div class="info my-5">
           <div class="flex items-center gap-3">
             <svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -507,6 +567,63 @@
           class="h-[500px] md:h-full w-full"></iframe>
       </div>
     </div>
+    <div class="inquiry">
+      <div class="section-container about-us-card py-4" id="enquiry-section">
+        <div class="inquiry-div">
+          <div class = "inquiry-div1 mb-10 md:mb-2 md:inline-block">
+            <div class="flex justify-center my-6">
+              <h1 class="inline-block section-header text-center poppins text-xl md:text-4xl" data-aos="fade-in">Inquiry Form</h2>
+            </div>
+            <form id="enquiry-form" class="enquiry-form" method="post" action="javascript:void(0)">
+              <div class="flex flex-col justify-center">
+                <input type="hidden" name="_token" value="UfzpPKCXtBVmRJ6wgr5xvnvhh79Vx3fW5L86QxJ3">
+                <input type="hidden" name="card_id" value="174">
+
+                <input type="text" name="enquiryName" id="enquiryName" placeholder="Enter Full Name" required
+                  class="h-12 pl-4 field poppins" data-aos="fade-in">
+                <!-- <div class="enquiry-phoneNumber"> -->
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" required
+                  class="h-12 pl-4 field poppins mt-2" pattern="^[0-9]{10}" title="Enter 10-digit number" data-aos="fade-in">
+                <!-- </div> -->
+                <!-- <div class="enquiry-email"> -->
+                <!-- <input type="text" name="email" id="email" placeholder="Enter Email" required
+                            class="h-12 field pl-4 mt-2"> -->
+                <!-- </div> -->
+                <select name="events" id="events" class="mt-2 field poppins" data-aos="fade-in">
+                  <option value="Kitty Party">Kitty Party</option>
+                  <option value="Birthday Party">Birthday Party</option>
+                  <option value="Anniversary Party">Anniversary Party</option>
+                  <option value="Party">Party</option>
+                </select>
+
+                <textarea name="message" id="message" placeholder="Enter Message" required
+                  class="h-32 pl-4 field pt-2 mt-2 poppins field" data-aos="fade-in"></textarea><br>
+
+                <div class="flex justify-center md:justify-start" data-aos="fade-in">
+                  <input type="submit" id="enquiry-form-btn" value="Send"
+                    class="Send_button text-white poppins py-2 px-4 w-40 mt-2 field">
+                  <span id="enquiry-form-error"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="reserve inquiry-div2">
+            <div class="flex justify-center my-6" data-aos="fade-in">
+              <h1 class="inline-block section-header text-center poppins text-xl md:text-4xl">Reservations</h2>
+            </div>
+            
+            <div class="flex justify-center" data-aos="fade-in">
+              <a href="https://wa.me/919737701159?text= Hello Dostean! I need a reservation !"><button type="submit" id="reserve" value="Reserve a Table"
+                class="Send_button text-white poppins py-2 px-4 w-60 mt-2 field" title="Click to reserve a table">Reserve a Table</button></a>
+              <span id="enquiry-form-error"></span>
+            </div>
+             
+
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- Footer -->
@@ -537,6 +654,10 @@
 
   <script src="/js/testimonial-slider.js">
   </script>
+
+  <script src="/js/inquiry.js">
+  </script>
+
 </body>
 
 </html>
